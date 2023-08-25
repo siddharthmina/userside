@@ -1,0 +1,415 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: Arial, sans-serif;
+  font-size: 12px; /* Decreased button font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  padding: 8px 16px; /* Updated button size */
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Header */
+header {
+  background-color: #ffffff; /* Set a header color */
+  color: #fff;
+  padding: 5px;
+  margin-bottom: 5px; /* Added margin bottom to create spacing */
+}
+
+.logo-section {
+  text-align: center;
+  margin-top: 10px;
+}
+.logo-section img {
+  height: 40px;
+  width: auto;
+}
+
+/* Cart items */
+#cartItems {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cartItems ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#cartItems li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#cartItems img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+#cartItems div {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cartTotal {
+  font-weight: bold;
+}
+
+/* Coupon and order buttons */
+#cartActions {
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#couponInput {
+  display: flex;
+  align-items: center;
+}
+
+#couponInput input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+#applyCouponBtn {
+  background-color:#dddfdf;
+  color: #1d1d1d;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  font-size: 15px;
+  padding: 10px;
+}
+
+#applyCouponBtn:hover {
+  background-color: #7d807f;
+}
+
+#checkoutBtn ,
+#initiatePayment{
+  background-color: #007db5;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+  font-size: 18px;
+  padding: 10px;
+}
+
+#checkoutBtn:hover {
+  background-color: #1ca5a5;
+}
+
+#editCartBtn ,#editAddressBtn {
+  background-color: #f1f1f1;
+  color: #000000;
+  padding: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#editCartBtn:hover {
+  background-color: #034c44;
+}
+
+/* User account information */
+.user-account-page {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  order: 4; /* Move the user account information to the bottom */
+  margin-top: auto; /* Align user account section to the bottom */
+}
+
+.user-info {
+  margin-bottom: 20px;
+  font-size: medium;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Update address section */
+.update-address-section {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  order: 1; /* Move the update address section to the top */
+}
+
+.update-address-section h4 {
+  margin-bottom: 20px;
+}
+
+.update-address-section input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.update-address-section button {
+  font-size: 12px; /* Decreased button font size */
+  background-color: #007db5;
+  color: #fff;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.update-address-section button:hover {
+  background-color: #02534b;
+}
+
+/* Order placed message */
+#orderPlacedMessage {
+  display: none;
+  text-align: center;
+}
+
+#orderPlacedMessage h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#orderPlacedMessage button {
+  font-size: 12px; /* Decreased button font size */
+  background-color: #007db5;
+  color: #fff;
+  border-radius: 60px;
+  transition: background-color 0.3s ease;
+}
+
+#orderPlacedMessage button:hover {
+  background-color: #007db5;
+}
+
+/* Add this CSS to your orderpage.css or any CSS file linked to your HTML */
+
+#floatingMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  display: none;
+}
+
+#floatingMessage.show {
+  display: block;
+}
+
+
+/* ... (your existing styles) ... */
+
+
+/* Mobile styles */
+@media (max-width: 700px) {
+  .container {
+    padding: 10px;
+  }
+
+  header {
+    padding: 5px 10px;
+  }
+
+  .logo-section img {
+    height: 30px;
+  }
+
+  #cartItems {
+    padding: 10px;
+  }
+
+  #cartItems li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #cartItems img {
+    width: 100px;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  #cartTotal {
+    margin-top: 10px;
+  }
+
+  #cartActions {
+    flex-direction: column;
+    align-items:unset;
+  }
+
+  #couponInput {
+    margin-bottom: 10px;
+  }
+
+  #couponInput input[type="text"] {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .user-account-page {
+    padding: 10px;
+  }
+
+  .user-info {
+    text-align: center;
+  }
+
+  .update-address-section {
+    padding: 10px;
+  }
+
+  #orderPlacedMessage button,
+  
+  #checkoutBtn , 
+  #initiatePayment {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 17px;
+  }
+}
+
+.step-container {
+  display: flex;
+  align-items: center;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.step-icon.active-step {
+  background-color: #007db5;
+  color: #ffffff;
+}
+
+.step-icon.completed-step {
+  background-color: #168d9a;
+  color: #ffffff;
+}
+
+.step-line {
+  height: 5px;
+  background-color: #f0f0f0;
+  flex-grow: 1;
+}
+
+.step-line.completed-line {
+  background-color: #168d9a;
+}
+
+
+
+#editCartBtn, #editAddressBtn {
+  background: linear-gradient(to bottom, #ffffff, #ffffff);
+  border: 0px solid #ccc;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 0px 0px; /* Smaller padding */
+  font-size: 14px; /* Smaller font size */
+  margin-right:10px;
+  
+}
+
+#editCartBtn:hover, #editAddressBtn:hover {
+  background: linear-gradient(to bottom, #e0e0e0, #f9f9f9);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+#editCartBtn:active, #editAddressBtn:active {
+  background: linear-gradient(to top, #e0e0e0, #f9f9f9);
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
+  transform: translateY(1px);
+}
+.loader-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

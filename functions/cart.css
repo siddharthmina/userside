@@ -1,0 +1,255 @@
+/* Container styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  justify-content: space-between;
+  
+  z-index: 1000;
+  
+}
+
+
+/* CSS for the logo */
+.logo-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.logo-section img {
+  max-width: 200px;
+ 
+}
+
+
+/* Cart section */
+.cart-section {
+  margin-top: 40px;
+}
+
+.cart-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 20px;
+}
+
+.cart-item .product-details {
+  flex: 1;
+}
+
+.cart-item .product-details h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.cart-item .product-details p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.cart-item .product-details .price {
+  font-weight: bold;
+}
+
+.cart-total{
+  color: #1c1d1c;
+  margin-top:10px;
+  
+}
+
+#checkout-button {
+  display: block;
+  margin-top: 20px;
+  background-color: #007db5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#checkout-button:hover {
+  background-color: #055b52;
+}
+
+/* Footer */
+footer {
+  margin-top: 40px;
+  background-color: #f0f0f0;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Floating message */
+#floatingMessage {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#floatingMessage.show {
+  opacity: 1;
+}
+#empty-cart-button {
+  display: block;
+  margin-top: 10px;
+  background-color: #dddfdf;
+  color: #454444;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#empty-cart-button:hover {
+  background-color: #acaead;
+}
+/* Sign Up and Sign In Buttons Styles */
+#sign-up-button{
+  background-color: #007db5;
+  color: #fff;
+  border: none;
+  padding: 8px 29px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  display: flex;
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+#sign-in-button {
+  background-color: #05909d;
+ 
+  color: #fff;
+  border: none;
+  padding: 8px 29px 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 15px;
+  transition: background-color 0.3s ease;
+  margin: 0 10px;
+  display: flex;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+#sign-up-button:hover,
+#sign-in-button:hover {
+  background-color: #023e45;
+}
+
+/* Add some shadow on hover to create a 3D effect */
+#sign-up-button:hover,
+#sign-in-button:hover {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add some margin between buttons */
+#sign-up-button + #sign-in-button {
+  margin-left: 10px;
+}
+
+
+.step-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 50px;
+ 
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  background-color: #f0f0f0;
+  color: #53565a;
+}
+
+.step-line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: #f0f0f0;
+}
+
+.completed-step {
+  background-color: #007db5;
+  color: #ffffff;
+}
+.loader-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}

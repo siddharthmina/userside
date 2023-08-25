@@ -1,0 +1,1228 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:'Courier New', Courier, monospace;
+ 
+}
+.row{
+  background-color: white;
+}
+.logo-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.img-fluid{
+  align-content: center;
+  vertical-align: middle;
+  margin-top: 4px;
+  max-width: 150px;
+  max-height: 150px;
+  animation: zoomIn 2s;
+  transition: transform 0.2s;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* Add hover effect */
+.logo-img:hover {
+  transform: scale(1.1);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px;
+  
+}
+.header-icon{
+  margin: 10px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Header */
+
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+    z-index: 1000;
+    
+  }
+  
+  .header-icon {
+    margin-left: 10px;
+  }
+  
+  .header-icon img {
+    width: 20px;
+    height: 20px;
+  }
+  
+/* Styling for Navigation Bar */
+/* Custom CSS for Navigation Bar */
+.navbar{
+  margin-top: 5%;
+}
+.navbar-brand {
+  margin-right: 10px;
+}
+
+.navbar-brand .navbar-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+  font-size: 16px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+.navbar .navbar-nav .nav-link.btn-primary {
+  color: #fff;
+  background-color: #007db5;
+}
+
+.navbar .navbar-nav .nav-link.btn-primary:hover {
+  background-color: #036896;
+}
+
+@media (min-width: 991px) {
+  .navbar .navbar-nav-category {
+    display: none!important;
+  }
+  .navbar .navbar-nav {
+    display: flex;
+  }
+}
+  
+  .hero {
+    position: static;
+    min-height:600px; /* Adjust as needed to fill the viewport */
+    background-image: url('../image/cateogryimage.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+  @media (min-width: 850px) {
+    .hero {
+      background-position: center center;
+      background-size: cover;
+      background-position: center;
+      background-image: url('../image/cateogryimage.jpeg')!important; 
+    }
+  }
+  /* Center background image for mobile screens */
+@media (max-width: 991.98px) {
+  .hero {
+    background-position: center center;
+    background-size: cover;
+    background-image: url('../image/website.jpeg');
+    background-position: center;
+    background-color: #000;
+    background-attachment: scroll;
+    position: relative;
+  }
+  .navbar{
+   margin-top:67px;
+    gap:10px;
+  }
+}
+  /* Custom CSS for mobile view */
+  @media (max-width: 991.98px) {
+    .navbar-nav {
+      justify-content: flex-start; /* Override Bootstrap justify-content */
+    }
+    .navbar .container-fluid{
+      justify-content: flex-start; 
+      gap:10px;
+    }
+    .navbar .navbar-nav .nav-link.btn-primary {
+      color: #fff;
+      background-color: #007db5;
+      margin-bottom: 10px;
+    }
+  }
+    /* Custom styles for the toggler button */
+    .navbar-toggler {
+      border: none; /* Remove the default border */
+      background: transparent; /* Set the background to transparent */
+      outline: none; /* Remove the outline when the button is focused */
+      cursor: pointer;
+      padding: 0; /* Remove default padding */
+    }
+  
+    /* Styling the toggler icon */
+    .navbar-toggler-icon {
+      width: 30px;
+      height: 2px;
+      background-color: #333; /* Set the color of the toggler icon */
+      display: block;
+      position: relative;
+      transition: background-color 0.3s ease-in-out;
+      transform-origin: 50% 50%; /* Set the rotation origin to the center */
+      box-shadow: 0 6px #333, 0 -6px #333; /* Add a box-shadow to create a 3D effect */
+    }
+  
+
+
+  /* Keyframes for the hero section animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* Apply the new font to specific elements */
+body, button, input, select, textarea {
+  font-family: 'Quicksand', sans-serif;
+}
+
+  .hero-content {
+    color: #fff; /* Optionally, set the text color */
+    position:absolute;
+    bottom: 20px;
+    left: 20px;
+    text-align:start;
+  }
+  
+
+  .hero-title {
+    font-size: 29px; /* Adjust the font size as needed */
+    margin-bottom: 30px; /* Adjust the margin as needed */
+    font-weight: bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+
+  }
+  .hero-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family:Montserrat,Helvetica,Arial,sans-serif;
+    text-align: left;
+    color: #ffffff; /* Dark color for text */
+    backdrop-filter: blur(0px); /* Apply a blur effect to the background */
+    padding: 5px 10px; /* Add some padding to create space between text and background */
+    border-radius: 5px; /* Add border-radius for a rounded look */
+  }
+  
+
+  .hero-text {
+    margin-top: 5px; /* Adjust the margin as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    font-family: Montserrat,Helvetica,Arial,sans-serif;
+    text-align: left;
+    padding: 5px;
+  }
+
+  /* Optional: Style the button if needed */
+  .hero .btn {
+    position: relative;
+    padding: 7px 20px;
+    margin-right: 5px;
+    margin-bottom: 30px;
+    margin-left: 12px;
+    background-color: #817f7f;
+    color: #fff;
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Montserrat,Helvetica,Arial,sans-serif;
+    border-radius: 35px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none; /* Remove the default button border */
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Add a box-shadow for 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition effects */
+  }
+/* SHOP WOMEN button style */
+.hero .btn-women {
+  background-color: #fff;
+  color: #000;
+}
+
+/* SHOP MEN button style */
+.hero .btn-men {
+  background-color: #4d4c4c;
+}
+
+
+/* On hover, add a slight transformation and increase box-shadow for a 3D effect */
+.hero .btn:hover {
+  transform: translateY(-2px); /* Slight upward movement */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* On active (when clicked), restore the original position */
+.hero .btn:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+ 
+
+
+
+/* Adjust the button font size and padding as needed */
+
+/* Media query for mobile screens */
+@media (max-width: 767.98px) {
+  .btn-lg {
+    font-size: 1.1rem; /* Decrease font size for mobile screens */
+    padding: 10px 20px; /* Decrease padding for mobile screens */
+  }
+}
+/* Add styles for the notification bar */
+.notification-bar {
+  background-color: #000000; /* Set the background color */
+  color: #fff; /* Set the text color */
+  padding: 10px; /* Add some padding to the bar */
+  max-width: 100%;
+  text-align: center; /* Center the messages */
+  overflow: hidden; /* Hide any overflowing content */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+
+/* Style the individual notification messages */
+.notification-bar .moving-messages {
+  display: inline-block;
+  animation: moveMessages 10s linear infinite alternate; /* Set the animation properties */
+  white-space: nowrap;
+ 
+}
+
+/* Keyframes for the animation */
+@keyframes moveMessages {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+/* Custom styles for mobile screens */
+@media screen and (max-width: 850px) {
+  .notification-bar {
+    font-size: 12px; /* Decrease font size for smaller screens */
+    max-width: 100%; /* Set the maximum width to 100% to fit within the screen */
+    overflow: hidden; /* Hide any overflowing content */
+    white-space: nowrap; /* Prevent line breaks */
+  }
+
+  .notification-bar .moving-messages {
+    animation-duration: 10s; /* Faster animation for smaller screens */
+   
+    white-space: nowrap; /* Prevent line breaks for messages */
+    display: inline-block;
+    overflow: hidden;
+  }
+}
+/* Add new CSS class for the "Immortals" heading */
+.immortals-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 10px; /* Adjust the margin value as needed */
+}
+/*category image*/
+.categorycontainer {
+  overflow-x: hidden;
+  display: flex;
+ 
+}
+
+.image-container {
+  flex-shrink: 0;
+  width: 33.33%; /* Adjust the width of each image container as needed */
+  text-align: center;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.image-label {
+  margin-top: 5px;
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 850px) {
+  .categorycontainer {
+    /* Show one category per row on mobile */
+    flex-wrap: wrap;
+    width: 100%; /* Each category occupies the full width */
+  }
+
+}
+/* Products Section Styles */
+.products-section {
+  background-color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-top:0px;
+  margin-bottom: 40px;
+  color: #333;
+}
+.products-section h3 {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+}
+.product-grid-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  width:300;
+}
+
+.product-grid {
+  display: flex; /* Change to flex to allow wrapping */
+  flex-wrap: nowrap; /* Ensure flex items do not wrap */
+  justify-content: flex-start; /* Align items to the left */
+  overflow-x: auto;
+  padding: 20px; 
+  
+}
+
+.product-card {
+  
+  width: calc(33.33% - 40px);
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 4px;
+  display: inline-block;
+  margin: 10px;
+  width: auto; /* Set the width of each card as needed */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the cards */
+  transition: transform 0.3s ease-in-out; /* Add a smooth transition for animations */
+}
+
+/* Hover animation: Scale the card slightly on hover */
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+/* Additional styling for the product content inside the card */
+.product-content {
+  margin-top: 10px;
+  color: #333;
+}
+
+.product-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-price {
+  font-size: 16px;
+}
+
+.product-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.product-card img {
+  
+  
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.product-card h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.product-card .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #666;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Buying Options Section */
+.buying-options {
+  background-color: #f5f5f5;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 20px;
+  padding: 40px 0;
+  text-align: center;
+  width:auto;
+}
+
+.buying-options h2 {
+  margin-bottom: 30px;
+}
+
+.buying-options-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.buying-option img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.buying-option h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.buying-option p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+/* Bottom Section */
+.bottom-section {
+  background-color: #f7f7f7;
+  padding: 30px 0;
+  font-family:Arial, Helvetica, sans-serif;
+  
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+}
+
+.section-column {
+  flex-basis: calc(33.33% - 20px);
+}
+
+.section-column h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.help-links,
+.account-links,
+.pages-links {
+  display: flex;
+  flex-direction: column;
+}
+.help-links{
+  font-family:Arial, Helvetica, sans-serif;
+} 
+.help-links a,
+.account-links a,
+.pages-links a {
+  margin-bottom: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.help-links a:hover,
+.account-links a:hover,
+.pages-links a:hover {
+  color: #888;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 14px;
+}
+
+
+
+
+
+#floatingMessage {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 10px;
+  background-color: #363333;
+  border: 1px solid #373535;
+  border-radius: 4px;
+  box-shadow: 0px 2px 10px rgba(150, 147, 147, 0.1);
+  text-align: center;
+  color: #ffffff;
+  font-size: small;
+}
+
+#floatingMessage.show {
+  display: block;
+}
+
+/* Add to Cart button */
+.product-card button {
+  background-color: #009688;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #009688;
+}
+
+.product-card button:active {
+  background-color: #00695c;
+}
+
+
+
+/* Add custom link styles */
+.custom-link {
+  text-decoration: none; /* Remove underline */
+  color: #000; /* Change link color to black (or any other color you prefer) */
+}
+
+/* Optional: Add hover styles to give visual feedback when hovering over the link */
+.custom-link:hover {
+  color: #5b5757; /* Change link color on hover (you can use any color you prefer) */
+  /* Add any other hover styles as needed */
+}
+
+/* New styles for mobile screens (max-width: 768px) */
+@media (max-width: 850px) {
+
+  
+.hero .btn{
+  margin-bottom: 0px;
+}
+  .hero .btn-women {
+   margin-left:9x;
+   
+  }
+  
+  /* SHOP MEN button style */
+ 
+
+
+  .flex-nowrap .product-card {
+     
+    padding:0px;
+    width: calc(70% - 20px); /* Adjust the width as needed */
+    max-width: calc(70% - 20px); /* Adjust the maximum width as needed */
+  }
+   /* Truncate the product title and display ellipsis for mobile */
+   .flex-nowrap .product-card .product-details h3 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left:10px;
+    font-size: 14px;
+  }
+
+   /* Hide the Add to Cart button and size selection for mobile */
+   .flex-nowrap .product-card .size-and-color-container,
+   .product-color,
+   .flex-nowrap .product-card button {
+     display: none;
+   }
+   .row {
+    flex-wrap: nowrap!important;
+  }
+
+  /* Hero Section */
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 10px;
+  }
+  .bottom-section{ 
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
+
+  /* Buying Options Section */
+  .buying-options-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+
+  
+  
+
+  .section-column {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+  }
+
+  /* Footer */
+  footer p {
+    font-size: 12px;
+  }
+
+
+
+
+
+
+/* 3. Add animation to product card */
+
+.products-section{
+  font-size: medium;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.products-section h2{
+  font-size: 24px;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+  /* Adjust the price container for mobile */
+  .price-container {
+    flex-direction: row;
+    gap: 0px;
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  /* Center the product title and price on mobile */
+  .product-card h3 {
+    text-align: center;
+  }
+
+  /* Adjust product card layout for mobile */
+  .product-card {
+    width: 100%;
+    flex: 0 0 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .product-details {
+    padding: 10px;
+  }
+
+  .product-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .product-details p {
+    font-size: 14px;
+    margin: 0;
+    color: #666;
+  }
+
+  /* Adjust product size dropdown for mobile */
+  .size-and-color-container select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 10px;
+  }
+
+  .size-and-color-container label {
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  /* Styling for the "Add to Cart" button on mobile */
+  .product-card button {
+    width: 100%;
+    padding: 12px 0;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  /* Align product details and price in a row on mobile */
+  .price-container {
+   
+    align-items: center;
+  }
+
+  .price-container h20,
+  .price-container h19,
+  .price-container p {
+    margin: 0;
+  }
+
+  .product-details {
+    flex: 1;
+  }
+  /* Adjust the hero section for mobile */
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+
+  .hero .btn {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+
+  /* Adjust buying options grid for mobile */
+  .buying-options-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+  }
+}
+
+/* ... Existing styles for larger screens (min-width: 769px) ... */
+
+
+
+/* Set product card width for PC screens (min-width: 769px) */
+@media (min-width: 850px) {
+
+    /* Hide the Add to Cart button and size selection for mobile */
+    .flex-nowrap .product-card .size-and-color-container,
+    .product-color,
+    .flex-nowrap .product-card button {
+      display: none;
+    }
+  .price-container {
+  align-items: center;
+  margin-left: 70px;
+  }
+  .flex-nowrap .product-card {
+    padding-right: 0px;
+    padding-left: 0px;
+    padding-top: 0px;
+    background-color: white;
+  }
+  .product-grid-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .product-card img{
+    width: 300px;
+    height: 400px;
+  }
+  .product-card{
+width:fit-content;
+  }
+  .product-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .product-card {
+    width: 300px; /* Set the width to 300px for PC screens */
+    /* Keep the original margin for spacing between cards on PC */
+  }
+}
+
+/* Styling for the size dropdown */
+label[for="select-size"] {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+select#select-size {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Optional: Style the dropdown arrow icon */
+select#select-size::-ms-expand {
+  display: none;
+}
+
+select#select-size::after {
+  content: '\f0d7'; /* Font Awesome arrow icon (optional) */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  color: #666;
+  pointer-events: none;
+}
+
+/* Optional: Hover effect for the dropdown */
+select#select-size:hover {
+  border-color: #999;
+}
+
+/* Optional: Focus effect for the dropdown */
+select#select-size:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+}
+/* Add this CSS for displaying discounted price and regular price in the same row */
+.product-details {
+  display: flex;
+  
+  flex-direction: column;
+}
+.product-details h3{
+  align-content: center;
+  font-size: medium;
+}
+.product-details p {
+  margin: 0;
+  color:#d21d29;
+}
+
+.product-details h20 {
+  text-decoration: line-through;
+  color: #2b2a2a;
+}
+
+.product-details p.discounted-price {
+  color: #333;
+}
+
+.product-details .size-and-color-container {
+  margin-top: 10px;
+}
+
+.size-and-color-container label {
+  font-weight:500;
+  margin-bottom: 10px;
+}
+
+.size-and-color-container select {
+  width:14%;
+  padding: 0px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 10px;
+}
+/* CSS to display the price elements in a row */
+.price-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-content: center;
+}
+
+.price-container h20,
+.price-container h19,
+.price-container p {
+  margin:0;
+}
+
+.price-container p {
+  margin-left:10px;
+}
+
+/* Optional: Style the dropdown arrow icon */
+.size-and-color-container select::-ms-expand {
+  display: none;
+}
+
+.size-and-color-container select::after {
+  content: '\f0d7'; /* Font Awesome arrow icon (optional) */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  top: 14px;
+  right: 15px;
+  color: #666;
+  pointer-events: none;
+}
+
+/* Optional: Hover effect for the dropdown */
+.size-and-color-container select:hover {
+  border-color: #999;
+}
+
+/* Optional: Focus effect for the dropdown */
+.size-and-color-container select:focus {
+  outline: none;
+  border-color: #4d90fe;
+  box-shadow: 0 0 5px rgba(77, 144, 254, 0.5);
+}
+
+
+.loader-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+#loginPopup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 350px;
+  border-radius: 10px;
+}
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+  color: #aaa;
+}
+.popup-content {
+  text-align: center;
+}
+.popup-content h5 {
+  color: #333;
+  margin: 10px 0;
+}
+.popup-content p {
+  font-size: 16px;
+  color: #666;
+}
+#backgroundOverlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 999; /* below the popup */
+}
+
+
+.elegant-button {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.elegant-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, #ffffff00, #ffffff22);
+  border-radius: inherit;
+  z-index: 1;
+}
+
+.elegant-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.elegant-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.offer-section {
+  overflow: hidden;
+}
+
+.main-container {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.scroll-container {
+  display: flex;
+  animation: scrolling 7s linear infinite; /* Adjust the duration as needed */
+}
+
+.offer-container {
+  display: inline-block;
+}
+
+.offer-container a {
+  display: inline-block;
+  width: 25%; /* Adjust the width based on the number of images */
+}
+
+.offer-container img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 400px; /* You can adjust this to the desired height */
+}
+
+/* Define the scrolling animation */
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-25%); /* Move the width of one image set */
+  }
+}
+
+.menu-open .hero {
+  margin-top: 200px; /* You can adjust this value based on the height of your menu */
+  transition: margin-top 0.3s ease;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse.show + .hero .btn {
+    margin-top: 100px; /* Adjust this value to your liking */
+  }
+}
+
+
+
+/* Specific styling for mobile screens */
+@media screen and (max-width: 767px) {
+  .product-card img {
+    width:100%!important; /* Set the width */
+    height: 310px; /* Set the height */
+    object-fit:fill; /* Ensure the image is not cropped */
+  }
+  .product-card{
+    width:40%!important;
+  }
+}

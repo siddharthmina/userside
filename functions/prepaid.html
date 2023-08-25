@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27GHWZBHXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27GHWZBHXT');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--meta tags here-->
+  <meta name="description" content="Immortals Lifestyle - Your destination for premium Lifestyle wear">
+  <meta name="keywords" content="Immortals Lifestyle,Immortals, Athleisure, Plain tshirts, Printed tshirts, Sweatshirts, ActiveWear, Regular-Fit, Shorts,gym tshirt , gym sando , sports tshirt , sports sando ,yoga tshirt ">
+  <meta name="author" content="Immortals Lifestyle">
+  <meta name="description" content="Shop Tops for Women online in India from Immortals Lifestyle.. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="keywords" content>  
+  <meta property="og:site_name" content="Immortals Lifestyle"> 
+  <meta property="og:title" content="Immortals Lifestyle">
+  <meta property="og:description" content="Slay the Day the Immortals Way! Explore our premium clothing designs.Online Shopping Site for Men & Women. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <meta property="og:image" content="image/logo.jpeg">
+  <meta property="og:url" content="https://www.immortals.org.in/orderpage.html">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="functions/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="orderpage.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+  <title>Immortals Lifestyle Order Page</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CheckoutPage",
+      "name": "Order Page",
+      "description": "Complete your order by providing payment and shipping details.",
+      "url": "https://www.immortals.org.in/orderpage"
+    }
+    </script>
+    
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="logo-section">
+        <a href="../index.html"><img src="image/logo.jpeg" alt=""></a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container mt-4 mb-4">
+    <div class="row justify-content-center">
+        <div class="col text-center step-container">
+            <div class="step-icon completed-step"><i class="fas fa-shopping-cart"></i></div> <!-- Cart Step -->
+            <div class="step-line completed-line"></div>
+            <div class="step-icon completed-step"><i class="fas fa-map-marker-alt"></i></div> <!-- Address Step -->
+            <div class="step-line completed-line"></div>
+            <div class="step-icon active-step"><i class="fas fa-credit-card"></i></div> <!-- Payment Step -->
+            <div class="step-line"></div>
+            <div class="step-icon"><i class="fas fa-check-circle"></i></div> <!-- Confirmation Step -->
+        </div>
+    </div>
+</div>
+<div id="loadingState" class="loader-container">
+  <div class="loader"></div>
+</div>
+  <!-- Cart items -->
+  <div id="cartItems" class="container">
+    <ul id="cartList" class="list-unstyled"></ul>
+    <h5 id="cartTotal">Total:₹0</h5>
+  </div>
+
+  <section class="user-account-page">
+    <div class="container">
+      <div class="user-info" id="userInfo">
+        <!-- User information will be displayed here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Coupon and order buttons -->
+  <div id="cartActions" class="container">
+    <div id="couponInput">
+      <input type="text" id="couponCode" placeholder="Enter coupon code">
+      <button id="applyCouponBtn" class="btn rounded-pill">APPLY</button>
+    </div>
+
+    <button id="checkoutBtn" class="btn btn-primary rounded-pill ">PLACE ORDER</button>
+
+  </div>
+
+  <div id="orderPlacedMessage" style="display: none;">
+    <h3>Order Placed Successfully!</h3>
+    <button id="continueShoppingBtn" class="btn btn-success">Continue Shopping</button>
+  </div>
+
+  <div id="floatingMessage" class="fade-in-out"></div>
+
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+
+
+    // Define guest ID and token
+    const GUEST_ID = "64db485839aa1e6354cdfa45";
+    const GUEST_TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0ZGI0ODU4MzlhYTFlNjM1NGNkZmE0NSIsImlhdCI6MTY5MjA5MjUyNH0.IWMurj7QUU63y3ZkK7fg1xyEhlLVl8VOaiiziEayedw";
+
+        // Function to get the user's ID and token (either logged-in user or guest)
+        const getUserCredentials = () => {
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user) {
+        return { id: user._id, token: user.token };
+      } else {
+        return { id: GUEST_ID, token: GUEST_TOKEN }; // Return guest credentials if user is not logged in
+      }
+    };
+
+// Function to show the loader
+function showLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'block';
+}
+
+// Function to hide the loader
+function hideLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'none';
+}
+
+// Use the functions before and after your async operations:
+async function someAsyncFunction() {
+    showLoader();
+    
+    // Your async operations, like API calls, etc.
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // For demonstration: simulating a delay.
+
+    hideLoader();
+}
+
+// For demonstration purposes:
+document.addEventListener('DOMContentLoaded', () => {
+    someAsyncFunction();
+});
+
+    let cartItems = []; // Array to store the cart items
+    let cartTotal = 0; // Variable to store the cart total
+    // Function to display the cart items
+    const displayCartItems = () => {
+      const cartList = $('#cartList');
+      cartList.empty(); // Clear previous cart items
+      
+      cartItems.forEach((item) => {
+        const totalPrice = item.product.price * item.count; // Calculate the total price for each item
+      
+        cartList.append(`
+          <li>
+            <img src="${item.product.images[0].url}" alt="${item.product.title}">
+            <div>
+              <span><b>Quantity</b>:${item.count}<hr></span>
+              <span>,<b>Price</b>:₹${totalPrice.toFixed(2)}<hr></span>
+             
+              
+            </div>
+          </li>
+        `);
+      });
+      
+      calculateCartTotal(); // Calculate the cart total
+    };
+    
+    // Function to calculate the cart total
+    const calculateCartTotal = () => {
+      const cartTotalElement = $('#cartTotal');
+      cartTotal = cartItems.reduce((total, item) => total + item.product.price * item.count, 0); // Calculate the cart total
+      cartTotalElement.text(`Total Amount: ₹${cartTotal.toFixed(2)}`);
+    };
+    
+    // Function to apply a coupon
+    const applyCoupon = () => {
+      const coupon = $('#couponCode').val();
+      const token = JSON.parse(localStorage.getItem('user'))?.token;
+    
+      if (coupon) {
+        $.ajax({
+          url: 'http://localhost:5008/api/user/cart/applycoupon',
+          method: 'POST',
+          data: { coupon },
+          headers: {
+            Authorization: `Bearer ${token}`
+          },
+          success: function(response) {
+            console.log('Coupon applied:', response);
+            if (response) {
+              cartTotal = parseFloat(response); // Update the cart total value
+              $('#cartTotal').text(cartTotal.toFixed(2)); // Update the cart total display
+              $('#couponCode').val(''); // Clear the coupon code input
+              displayFloatingMessage('Coupon applied successfully!'); // Display success message
+            }
+          },
+          error: function(error) {
+  // Check if the server provided a specific error message
+  const errorMessage = error.responseJSON?.message || 'Invalid Coupon!';
+  console.error('Error applying coupon:', error.responseText);
+  displayFloatingMessage(errorMessage); // Display the specific error message
+}
+        });
+      }
+    };
+
+// Function to display the floating message
+const displayFloatingMessage = (message) => {
+  const floatingMessage = $('#floatingMessage');
+  floatingMessage.text(message).addClass('show');
+
+  // Clear the message after 3 seconds
+  setTimeout(() => {
+    floatingMessage.removeClass('show');
+    floatingMessage.text('');
+  }, 3000);
+};
+
+    
+    // Event listener for applying a coupon
+    $(document).on('click', '#applyCouponBtn', applyCoupon);
+    
+    // Fetch user information on page load
+    $(document).ready(function () {
+    
+    });
+       
+    // Fetch user cart on page load
+    const token = JSON.parse(localStorage.getItem('user'))?.token;
+    $.ajax({
+      url: 'http://localhost:5008/api/user/cart',
+      type: 'GET',
+      dataType: 'json',
+      headers: {
+        Authorization: `Bearer ${token}`
+      },
+      success: function(response) {
+        if (response && response.products && response.products.length > 0) {
+          cartItems = response.products;
+          displayCartItems();
+        }
+      },
+      error: function(error) {
+        console.error(error);
+      }
+    });
+    
+ 
+ 
+    
+    // Function to display the success message
+    const displaySuccessMessage = (message) => {
+      const floatingMessage = $('#floatingMessage');
+      floatingMessage.removeClass('error').addClass('success').text(message);
+      floatingMessage.show();
+    
+      // Hide the message after 3 seconds
+      setTimeout(() => {
+        floatingMessage.hide();
+      }, 3000);
+    };
+    
+  
+    
+    // Function to redirect user to the user cart
+    const redirectToUserCart = () => {
+      window.location.href = 'cart.html';
+    };
+    
+    // Function to empty the cart
+    const emptyCart = () => {
+      const token = JSON.parse(localStorage.getItem('user'))?.token;
+    
+      $.ajax({
+        url: 'http://localhost:5008/api/user/empty-cart',
+        type: 'DELETE',
+        dataType: 'json',
+        headers: {
+          Authorization: `Bearer ${token}`
+        },
+        success: function(response) {
+          console.log('Cart emptied:', response);
+          cartItems = []; // Clear the cart items array
+          displayCartItems(); // Display the updated cart items (empty)
+        },
+        error: function(error) {
+          console.error('Error emptying cart:', error.responseText);
+          // Handle error case
+        }
+      });
+    };
+    
+  
+    
+    // Event listener for continue shopping button
+    $('#continueShoppingBtn').click(() => {
+      window.location.href = '../index.html';
+    });
+    
+    // Function to display the order placed message
+    const displayOrderPlacedMessage = () => {
+      $('#orderPlacedMessage').show();
+      $('#cartItems').hide();
+      $('#cartActions').hide();
+  // Hide the update address section
+    };
+     // Function to show a confirmation dialog
+     const showConfirmationDialog = () => {
+      return new Promise((resolve, reject) => {
+        const confirmation = confirm('To Confirm your cash on delivery Order click "OK"');
+        if (confirmation) {
+          resolve(true); // User confirmed
+        } else {
+          reject(false); // User canceled
+        }
+      });
+    }; 
+
+
+    // Event listener for checkout button
+    $('#checkoutBtn').on('click', function () {
+      const { id, token } = getUserCredentials();
+// Retrieve the address string from local storage
+const addressString = localStorage.getItem('address');
+// Parse the address string to get the address object
+const addressObject = JSON.parse(addressString);
+// Extract the address array from the address object
+let userAddress = addressObject?.address && addressObject.address[0];
+
+console.log('User Address:', userAddress); // Debug log
+
+
+
+      // Show the confirmation dialog before proceeding with the order
+      showConfirmationDialog()
+        .then(() => {
+          // Proceed with the checkout process
+          $.ajax({
+            url: 'http://localhost:5008/api/user/cart/cash-order',
+            type: 'POST',
+            dataType: 'json',
+            headers: {
+              Authorization: `Bearer ${token}`
+            },
+            data: {
+              COD: true,
+              couponApplied: false,
+              address: addressObject.address[0]
+            },
+            success: function (response) {
+              console.log('Order placed:', response);
+              displayOrderPlacedMessage(); // Display the order placed message
+              emptyCart(); // Empty the cart
+            },
+            error: function (error) {
+              console.error('Error placing order:', error.responseText);
+              // Handle error case
+            }
+          });
+        })
+        .catch(() => {
+          // User canceled the order
+          console.log('Order canceled');
+        });
+    });
+    
+ 
+    // ...
+
+// Function to refresh the cart
+const refreshCart = () => {
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+  $.ajax({
+    url: 'http://localhost:5008/api/user/cart',
+    type: 'GET',
+    dataType: 'json',
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    success: function(response) {
+      if (response && response.products && response.products.length > 0) {
+        cartItems = response.products;
+        displayCartItems();
+      }
+    },
+    error: function(error) {
+      console.error(error);
+    }
+  });
+};
+
+// ...
+
+// Fetch user cart on page load
+$(document).ready(function() {
+  refreshCart(); // Call the refreshCart function on page load
+});
+
+// ...
+
+// Fetch user information and cart on page load
+$(document).ready(function() {
+  fetchUserCart(); // Call the function to fetch the cart
+  // You can also add other functions here that need to run on page load
+});
+
+
+
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

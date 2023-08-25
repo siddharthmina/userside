@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://www.immortals.org.in/</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Product Category Pages -->
+    <url>
+    <loc>https://www.immortals.org.in/Men.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+    
+    <url>
+    <loc>https://www.immortals.org.in/Women.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- Product Category Pages -->
+    <url>
+    <loc>https://www.immortals.org.in/ATHLEISURE.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/Printed-Tshirts.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/Solid-Tshirts.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/Regularfit-Tshirts.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/Shorts.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/Sweatshirts.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/ActiveWear.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!--Proguct page-->
+  <url>
+    <loc>https://www.immortals.org.in/functions/product.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1</priority>
+  </url>
+
+   
+  <!-- About and Contact Pages -->
+  <url>
+    <loc>https://www.immortals.org.in/functions/signin.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/functions/createaccount.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/functions/useraccount.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/functions/termsofservice.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/functions/privacypolicy.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.immortals.org.in/functions/return.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.immortals.org.in/functions/FAQ.html</loc>
+    <lastmod>2023-07-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+
+</urlset>

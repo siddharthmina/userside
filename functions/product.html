@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27GHWZBHXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27GHWZBHXT');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3pa5F3fFPS5eA8v9cD5xTCy+4a+OX4" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta name="description" content="Immortals Lifestyle - Your destination for premium Lifestyle wear">
+  <meta name="keywords" content="Immortals Lifestyle,Immortals, Athleisure, Plain tshirts, Printed tshirts, Sweatshirts, ActiveWear, Regular-Fit, Shorts,gym tshirt , gym sando , sports tshirt , sports sando ,yoga tshirt ">
+  <meta name="author" content="Immortals Lifestyle">
+  <meta name="description" content="Shop Tops for Women online in India from Immortals Lifestyle.. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="keywords" content>  
+  <meta property="og:site_name" content="Immortals Lifestyle"> 
+  <meta property="og:title" content="Immortals Lifestyle">
+  <meta property="og:description" content="Slay the Day the Immortals Way! Explore our premium clothing designs.Online Shopping Site for Men & Women. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <meta property="og:image" content="image/logo.jpeg">
+  <meta property="og:url" content="https://www.immortals.org.in/product.html">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="functions/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="product.css">
+
+  <title>Immortals Lifestyle - Product</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      "name": "Product Name",
+      "description": "Detailed description of the product.",
+      "image": "https://example.com/image/product.jpeg",
+      "url": "https://www.immortals.org.in/product/product-id",
+      "brand": "Brand Name"
+    }
+    </script>
+    
+</head>
+<body>
+  <div class="container d-flex align-items-center">
+    
+    <header class="w-100">
+      
+      <div class="row justify-content-between align-items-center">
+         <!-- Header Icon left -->
+         <div class="col-auto"> 
+          <div class="header-icons d-flex">
+            <div class="header-icon">
+              <a href="useraccount.html"><img src="image/account.png" alt="My Account"></a>
+            </div>
+          </div>
+        </div>
+
+      
+        <!-- Logo Section -->
+        
+        <div class="col d-flex align-items-center justify-content-center"> <!-- Added d-flex and justify-content-center classes here -->
+          <a href="../index.html"><img src="image/logo.jpeg" alt="" class="img-fluid" style="max-width: 150px; max-height: 150px;"></a>
+        </div>
+        
+      
+        <!--Header Icon right-->
+        <div class="col-auto">
+          <div class="header-icons d-flex"> <!-- Added d-flex class here -->
+            <div class="header-icon">
+              <a href="cart.html"><img src="image/cart.png" alt="Cart"></a>
+            </div>
+            </div>           
+          </div>
+        </div> 
+    </header>
+  </div>
+ 
+  <!-- Create a container to display the product details -->
+  <div class="container product-container">
+    <h2 class="product-title"></h2>
+    <div id="product-details" class="product-details-container">
+      <!-- Product details will be dynamically added here -->
+      <!-- Add the size dropdown box -->
+      <div class="product-images-section">
+        <h3>Product Images:</h3>
+        <div class="product-images-container">
+          <!-- Product images will be dynamically added here -->
+        </div>
+        
+      </div> 
+    </div>
+   
+
+    <div class="ratings">
+      <h4>Rate Product:</h4>
+      <ul>
+        <!-- Average rating will be displayed here dynamically -->
+      </ul>
+      <!-- User can submit their rating here -->
+      <ul class="star-rating">
+        <li class="star" onclick="selectRating(0)">&#9733;</li>
+        <li class="star" onclick="selectRating(1)">&#9733;</li>
+        <li class="star" onclick="selectRating(2)">&#9733;</li>
+        <li class="star" onclick="selectRating(3)">&#9733;</li>
+        <li class="star" onclick="selectRating(4)">&#9733;</li>
+      </ul>
+      <textarea id="rating-comment" placeholder="Leave a comment"></textarea>
+      <label for="rating-images">Upload Images:</label>
+      <input type="file" id="rating-images" name="rating-images" multiple accept="image/*">
+      <button id="submit-rating" class="btn btn-primary rounded-pill w-100">SUBMIT RATING</button>
+    </div>
+    
+<!-- Floating Message -->
+<div id="floatingMessage"></div>
+
+  <!-- Buying Options Section -->
+  <section class="buying-options">
+    <div class="container">
+      <h2>Easy Shopping Experience</h2>
+      <div class="buying-options-grid">
+        <div class="buying-option">
+          <img src="image/shipping.png" alt="Shipping Icon">
+          <h3>Fast Shipping</h3>
+          <p>Get your order delivered quickly.</p>
+        </div>
+        <div class="buying-option">
+          <img src="image/customer.png" alt="cutomer service">
+
+          <h3>Customer Service</h3>
+          <p>For Your convenience We are Available Over
+             WhatsApp: +91 9799145237
+          </p>
+        </div>
+        <div class="buying-option">
+          <img src="image/secure.png" alt="Payment Icon">
+          <h3>Secure Payments</h3>
+          <p>Your payment information is safe with us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Help, My Account, and Pages Section -->
+  <section class="bottom-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 section-column">
+          <h2>Help</h2>
+          <div class="help-links">
+            <p>WhatsApp Us: +91 9799145237</p>
+            <p>Email Us: careimmortals@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-3 section-column">
+          <h2>My Account</h2>
+          <div class="account-links">
+            <a href="signin.html">Login</a>
+            <a href="createaccount.html">Signup</a>
+            <a href="useraccount.html">Order History</a>
+          </div>
+        </div>
+        <div class="col-md-3 section-column">
+          <h2>Pages</h2>
+          <div class="pages-links">
+            <a href="termsofservice.html">Terms of Service</a>
+            <a href="privacypolicy.html">Privacy Policy</a>
+            <a href="return.html">Return Policy</a>
+          </div>
+        </div>
+        <div class="col-md-3 section-column">
+          <h2>Follow Us</h2>
+          <div class="social-links">
+            <a href="https://www.instagram.com/immortals_athleisure/"><img src="image/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="image/twitter.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/profile.php?id=100094772927946"><img src="image/facebook.png" alt="Facebook"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="loadingState" class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <div id="message-container"></div>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Digital Clothing Store. All rights reserved.</p>
+    </div>
+  </footer>
+<!-- Sign-in or Continue as Guest Modal -->
+<div class="modal fade" id="guestModal" tabindex="-1" aria-labelledby="guestModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="guestModalLabel">Continue Shopping</h5>
+        <button type="button" class="close custom-close" aria-label="Close" onclick="$('#guestModal').modal('hide');">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        
+      </div>
+      <div class="modal-body">
+        <p>You can either sign in or continue as a guest.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary rounded-pill" id="signInButton" style="background-color: #007db5; border-color: #007db5;">Sign In</button>
+        <button type="button" class="btn btn-primary rounded-pill" id="continueAsGuestButton" style="background-color: #dddfdf; border-color: #dddfdf; color:black;">Continue as Guest</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script>
+    
+let selectedSize;
+let selectedColor;
+
+// Function to show the loader
+function showLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'block';
+}
+
+// Function to hide the loader
+function hideLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'none';
+}
+
+// Use the functions before and after your async operations:
+async function someAsyncFunction() {
+    showLoader();
+    
+    // Your async operations, like API calls, etc.
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // For demonstration: simulating a delay.
+
+    hideLoader();
+}
+
+// For demonstration purposes:
+document.addEventListener('DOMContentLoaded', () => {
+    someAsyncFunction();
+});
+
+
+
+
+
+// Variables to store the user's selected rating
+let selectedRating;
+const starElements = document.querySelectorAll('.star-rating .star');
+
+  // Function to handle user's star selection
+  function selectRating(starIndex) {
+    selectedRating = starIndex + 1;
+
+    // Update the visual representation of the selected rating
+    starElements.forEach((star, index) => {
+      if (index <= starIndex) {
+        star.style.color="#ffc34c";
+        console.log("colorisgolden");
+      } else {
+        star.style.color="grey";
+        console.log("colorisgrey");
+      }
+    });
+  }
+
+  // Add event listeners to the star elements
+  starElements.forEach((star, index) => {
+    star.addEventListener('click', () => selectRating(index));
+  });
+// Function to handle submitting the user rating
+async function submitRating(productId) {
+  try {
+    const starElements = document.querySelectorAll('.star-rating .star');
+    const userRating = selectedRating; // Make sure selectedRating is defined elsewhere in your code
+    const userComment = document.getElementById('rating-comment').value;
+    const images = document.getElementById('rating-images').files;
+    const token = JSON.parse(localStorage.getItem('user'))?.token;
+
+
+    if (!token) {
+     
+      return;
+    }
+
+    if (selectRating === undefined || userRating < 0) {
+  alert('Please select a star rating');
+  return;
+}
+
+    const formData = new FormData();
+    formData.append('star', userRating);
+    formData.append('prodId', productId);
+    formData.append('comment', userComment);
+    for (const image of images) {
+      formData.append('images', image);
+    }
+
+    const response = await axios.put(
+      'http://127.0.0.1:5008/api/product/rating',
+      formData,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'multipart/form-data',
+        },
+      }
+    );
+
+    displayFloatingMessage('Rating submitted successfully');
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
+  } catch (error) {
+    console.error(error);
+    displayFloatingMessage('Failed to submit rating');
+  }
+}
+
+
+
+// Function to handle adding the product to the cart
+async function addToCart(productId, count, color,size , price) {
+  try {
+    const token = JSON.parse(localStorage.getItem('user'))?.token;
+     
+    if (!selectedSize || !selectedColor) {
+  alert('Please select size and color before adding to the bag.');
+  return;
+}
+
+
+    if (token) {
+      // User is logged in, add to the cart using the token
+      // Make an API request to get the product details including images
+      const response = await axios.get(`https://www.immortals.org.in/api/product/${productId}`);
+
+      // Extract the necessary product details from the response
+      const productDetails = response.data;
+      const { title, images } = productDetails;
+
+      const responseCart = await axios.post(
+        'http://localhost:5008/api/user/cart',
+        {
+          cart: [
+            { _id: productId, count, color, size, price }
+          ]
+        },
+        {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        }
+      );
+
+      const newCart = responseCart.data;
+      console.log('Added to cart:', newCart);
+      displayFloatingMessage('Added to Cart');
+      updateCartCount(newCart.products.length);
+
+      // Redirect to the cart window after 1.5 seconds
+      setTimeout(() => {
+        window.location.href = 'cart.html';
+      }, 1500);
+    } else {
+     
+      return; 
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+
+   // Function to display the product details and size options
+   async function displayProductDetails() {
+    
+    const productDetails = JSON.parse(localStorage.getItem('selectedProduct'));
+    if (productDetails) {
+      const productDetailsContainer = document.getElementById('product-details');
+
+      // Fetch product rating from API endpoint
+      try {
+        const response = await axios.get(`https://www.immortals.org.in/api/product/${productDetails._id}`);
+        const productWithRating = response.data;
+        // Display product details including color and rating
+        productDetailsContainer.innerHTML = `
+          <div class="row product-details-row" >
+            <div class="col-md-4">
+           <div class="image-scroll-container">
+          ${productWithRating.images.map(image => `
+          <img src="${image.url}" alt="${productWithRating.title}">
+        `).join('')}
+        </div>
+        </div>
+            <div class="col-md-8 product-info">
+              <h2>${productDetails.title}</h2>
+              <p class="price">Price: ₹${productDetails.price} <h18 class="discountprice">₹${productDetails.discountprice}</h18> 
+                <h13 class="offer">-save ${productDetails.percentage}%</h13> </p>
+                <!-- Size boxes -->
+              <label for="size-container">Size:</label>
+              <div id="size-container" class="d-flex flex-wrap">
+              <!-- Size boxes will be dynamically added here -->
+              </div>  
+              <!-- Color boxes -->
+            <label for="color-container">Color:</label>
+            <div id="color-container" class="d-flex flex-wrap">
+            <!-- Color boxes will be dynamically added here -->
+            </div>
+              <!-- Add to Cart Button -->
+              <button class="btn btn-primary rounded-pill px-4 btn-add-to-cart w-100 ">
+              <i class="fas fa-shopping-bag"></i>  ADD TO BAG
+              </button>
+              <a href="offers.html">
+              <button class="btn btn-primary rounded-pill px-4 btn-add-to-cart w-100" style="background-color:#53565a;">
+              VIEW OFFERS
+             </button>
+              </a>
+              <p></br><b>Product Description</b>: ${productWithRating.description[0].descrip}</p>
+              <p>Fabric: ${productWithRating.description[1].fabric}</p>
+              <p>Features: ${productWithRating.description[2].features}</p>
+              <p>Tech: ${productWithRating.description[3].tech}</p>
+              <p>Composition & Care: ${productWithRating.description[4].compos}</p>
+              
+              <div class="ratinginfo overflow-auto" style="max-height: 500px;">
+  <h3>Ratings:</h3>
+ 
+  <ul>
+    ${productWithRating.ratings.map((rating) => `
+  <li>Posted By: ${rating.postedby}</li>
+  <li>Rating: ${rating.star}</li>
+  <li>Comment: ${rating.comment}</li>
+  <div class="image-scroll-container w-90">
+  ${rating.images ? rating.images.map(image => `<img src="${image.url}" alt="User Image" style="max-width:259px; max-height:250px; margin:6px;">`).join('') : ''}</div>
+`).join('</br>')}
+  </ul>
+</div>`;
+
+console.log('productWithRating object:', productWithRating);
+
+  // Add event listener to the "Submit Rating" button
+  const submitRatingButton = document.getElementById('submit-rating');
+  submitRatingButton.addEventListener('click', () => {
+    submitRating(productDetails._id);
+  });
+
+
+
+
+  const sizeContainer = document.getElementById('size-container');
+        sizeContainer.innerHTML = '';
+        productWithRating.size.forEach(size => {
+        const button = document.createElement('button');
+        button.className = 'size-button btn btn-light';
+        button.value = size;
+        button.textContent = size;
+        sizeContainer.appendChild(button);
+        });
+
+// Add click event listener to size buttons
+sizeContainer.addEventListener('click', (e) => {
+    if (e.target.classList.contains('size-button')) {
+    // Remove the 'selected' class from previously selected size button
+    document.querySelectorAll('.size-button.selected').forEach(button => {
+      button.classList.remove('selected');
+    });
+
+    // Add the 'selected' class to the clicked size button
+    e.target.classList.add('selected');
+
+    // Set the selected size value
+    selectedSize = e.target.value;
+  }
+});
+
+
+
+// Populate the color boxes
+const colorContainer = document.getElementById('color-container');
+colorContainer.innerHTML = '';
+productWithRating.color.forEach(color => {
+  const button = document.createElement('button');
+  button.className = 'color-button btn btn-light';
+  // button.style.backgroundColor = color; // Set the background color of the button
+  button.value = color;
+  button.textContent = color; // Or you can leave it empty if you want to show only the color
+  colorContainer.appendChild(button);
+});
+
+// Add click event listener to color buttons
+colorContainer.addEventListener('click', (e) => {
+  if (e.target.classList.contains('color-button')) {
+    // Remove the 'selected' class from previously selected color button
+    document.querySelectorAll('.color-button.selected').forEach(button => {
+      button.classList.remove('selected');
+    });
+
+    // Add the 'selected' class to the clicked color button
+    e.target.classList.add('selected');
+
+    // Set the selected color value
+    selectedColor = e.target.value;
+  }
+});
+
+
+
+
+
+// Add event listener to the "Add to Cart" button
+const addToCartButton = document.querySelector('.btn-add-to-cart');
+addToCartButton.addEventListener('click', () => {
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+
+  if (!token) {
+    $('#guestModal').modal('show'); // Show the modal if the user is not signed in
+  } else {
+    const size = selectedSize; // Retrieve selected size
+    const color = selectedColor;
+    addToCart(productDetails._id, 1, selectedColor, selectedSize);
+  }
+});
+
+// Event listener for Sign In button in the modal
+const signInButton = document.getElementById('signInButton');
+signInButton.addEventListener('click', () => {
+  window.location.href = 'signin.html'; // Redirect to the sign-in page
+});
+
+// Function to handle adding the product to the cart as a guest
+async function addProductToCartAsGuest() {
+  try {
+    const response = await fetch('http://localhost:5008/api/user/createGuestUser', {
+      method: 'POST',
+    });
+
+    // Check if the response is successful
+    if (response.status !== 200) {
+      console.error('An error occurred:', await response.text());
+      return; // Exit the function if the response was not successful
+    }
+
+    const guestUser = await response.json();
+
+    // Store the guest user details and token
+    localStorage.setItem('user', JSON.stringify(guestUser));
+
+    // Hide the modal
+    $('#guestModal').modal('hide');
+
+    // Continue with the add to cart functionality for guests
+    const size = selectedSize; // Retrieve selected size
+    const color = selectedColor;
+    addToCart(productDetails._id, 1, selectedColor, selectedSize);
+  } catch (error) {
+    console.error('An error occurred:', error);
+    // Handle the error appropriately
+  }
+}
+
+// Event listener for Continue as Guest button in the modal
+const continueAsGuestButton = document.getElementById('continueAsGuestButton');
+continueAsGuestButton.addEventListener('click', addProductToCartAsGuest);
+
+
+      } catch (error) {
+        console.error(error);
+        productDetailsContainer.innerHTML = '<p>Error loading product details.</p>';
+      }
+    }
+  }
+  
+      
+    // Function to display a floating message
+    const displayFloatingMessage = (message) => {
+      const floatingMessage = $('#floatingMessage');
+      floatingMessage.text(message);
+      floatingMessage.addClass('show');
+
+      setTimeout(() => {
+        floatingMessage.removeClass('show');
+      }, 1000); // Set the timeout to hide the message after 3 seconds
+    };
+
+    // Call the function on page load
+    window.addEventListener('DOMContentLoaded', displayProductDetails);
+  </script>
+
+</body>
+</html>

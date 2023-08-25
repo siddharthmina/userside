@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27GHWZBHXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27GHWZBHXT');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="useraccount.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <meta name="description" content="Immortals Lifestyle - Your destination for premium Lifestyle wear">
+  <meta name="keywords" content="Immortals Lifestyle,Immortals, Athleisure, Plain tshirts, Printed tshirts, Sweatshirts, ActiveWear, Regular-Fit, Shorts,gym tshirt , gym sando , sports tshirt , sports sando ,yoga tshirt ">
+  <meta name="author" content="Immortals Lifestyle">
+  <meta name="description" content="Shop Tops for Women online in India from Immortals Lifestyle.. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="keywords" content>  
+  <meta property="og:site_name" content="Immortals Lifestyle"> 
+  <meta property="og:title" content="Immortals Lifestyle">
+  <meta property="og:description" content="Slay the Day the Immortals Way! Explore our premium clothing designs.Online Shopping Site for Men & Women. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <meta property="og:image" content="image/logo.jpeg">
+  <meta property="og:url" content="https://www.immortals.org.in/useraccount.html">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="functions/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Font Awesome CSS -->
+  <title>User Account Information</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <title>IMMORTALS Lifestyle - USER PAGE</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "name": "User Account Information",
+      "description": "View and manage your account details, orders, and settings on the IMMORTALS Lifestyle user page.",
+      "url": "https://www.immortals.org.in/useraccount",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "User's Name",
+        "email": "User's Email",
+        "telephone": "User's Mobile",
+        "address": "User's Address"
+      }
+    }
+    </script>
+    
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="logo-section">
+        <a href="../index.html"><img src="image/logo.jpeg" alt=""></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- User Account Information Page -->
+  <section class="user-account-page">
+    <div class="userinfocontainer">
+      <h3>YOUR ACCOUNT</h3>
+      <div class="user-info">
+
+        <div class="info-group">
+          <label for="name">NAME</label>
+          <p id="name">-</p>
+          <span class="edit-icon" data-field="name"><i class="fas fa-pencil"></i></span>
+        </div>
+        <div class="info-group">
+          <label for="email">EMAIL</label>
+          <p id="email">-</p>
+          <span class="edit-icon" data-field="email"><i class="fas fa-pencil"></i></span>
+        </div>
+        <div class="info-group">
+          <label for="mobile">MOBILE</label>
+          <p id="mobile">-</p>
+          <span class="edit-icon" data-field="mobile"><i class="fas fa-pencil"></i></span>
+        </div>
+       
+        <div class="info-group">
+          <label for="address">ADDRESS</label>
+          <p id="address">-</p>
+          <span class="edit-icon" data-field="address"><i class="fas fa-pencil"></i></span>
+        </div>
+        <!-- <a href="address.html"><button id="addAddressButton">Update Address</button></a>
+         -->
+      
+        <button id="changeMobileButton">Change Mobile Number</button> <!-- Corrected id attribute -->
+        <form id="changeMobileForm" style="display:none;">
+       <input type="text" id="newMobile" placeholder="Enter your new mobile number">
+       <button type="submit">SAVE MOBILE NUMBER</button>
+     </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Your Orders Section -->
+  <section class="your-orders">
+    <div class="container">
+      <h3>YOUR ORDERS</h3>
+      <div id="orderList"></div>
+    </div>
+  </section>
+
+  <!-- Logout Button -->
+  <!-- <button id="logoutButton">Logout</button> -->
+
+  <!-- Success Message -->
+  <div id="successMessage" style="display: none;">User information updated successfully!</div>
+
+    <!-- Sign Up and Sign In Buttons -->
+    <div class="container">
+      <a href="createaccount.html"> <button id="sign-up-button" class="btn btn-primary rounded-pill w-100"style="display: none;">Create Account</button></a>
+     <a href="signin.html"> <button id="sign-in-button" class="btn btn-primary rounded-pill w-100" style="display: none;">Sign-in</button></a>
+    </div>
+    <div id="loadingState" class="loader-container">
+      <div class="loader"></div>
+    </div>
+   <!-- Floating Message -->
+   <div id="floatingMessage"  class="floating-message show">Please sign-in/sign-up!</div> 
+
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+ 
+ // Function to show the loader
+function showLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'block';
+}
+
+// Function to hide the loader
+function hideLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'none';
+}
+
+// Use the functions before and after your async operations:
+async function someAsyncFunction() {
+    showLoader();
+    
+    // Your async operations, like API calls, etc.
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // For demonstration: simulating a delay.
+
+    hideLoader();
+}
+
+// For demonstration purposes:
+document.addEventListener('DOMContentLoaded', () => {
+    someAsyncFunction();
+});
+// Function to show the floating message
+const showFloatingMessage = () => {
+  const floatingMessage = document.getElementById('floatingMessage');
+  floatingMessage.classList.add('show');
+
+  // Hide the floating message after 3 seconds (3000 milliseconds)
+  setTimeout(() => {
+    floatingMessage.classList.remove('show');
+  }, 1000);
+};
+// Function to hide the floating message
+const hideFloatingMessage = () => {
+  const floatingMessage = document.getElementById('floatingMessage');
+  floatingMessage.classList.remove('show');
+};
+
+ 
+ async function displayUserInformation() {
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+  const userId = JSON.parse(localStorage.getItem('user'))?._id;
+
+  // Function to check if the user is logged in
+const isUserLoggedIn = () => {
+  const user = JSON.parse(localStorage.getItem('user'));
+  return !!user;
+};
+
+  try {
+    const response = await axios.get(`https://www.immortals.org.in/api/user/${userId}`, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
+
+    const user = response.data.getaUser; // Use "getaUser" instead of "getUser"
+    console.log('User Information:', user);
+
+    if (user) {
+      // Display user information
+      $('#name').text(user.name);
+      $('#email').text(user.email);
+      $('#mobile').text(user.mobile);
+
+      // Check if user's address is available
+      if (user.address && user.address.length > 0) {
+        const address = user.address[0]; // Assuming the address is an array with one object
+        const addressString = `${address.useraddress}, ${address.city}, ${address.state}, ${address.pincode}`;
+        $('#address').text(addressString);
+      } else {
+        $('#address').text('-'); // If address is not available, display a default value ('-')
+      }
+    } else if(!token || token === 'undefined'){
+      
+      console.error('User not found.');
+      
+      // Handle the case when the user is not found or the response data is not as expected
+    }
+  } catch (error) {
+    console.error('Error fetching user information:', error);
+    // Handle the error case
+  }
+}
+
+
+// Check if user information is available in localStorage on page load
+$(document).ready(function() {
+  const user =  JSON.parse(localStorage.getItem('user'));
+  if (!user) {
+    showFloatingMessage();
+  } else {
+    hideFloatingMessage(); 
+  }
+});
+
+
+    // Fetch user information on page load
+    $(document).ready(function () {
+      displayUserInformation();
+    });
+
+
+    // Function to handle sign-up
+    const handleSignUp = () => {
+      const user = {
+        name: 'John Doe',
+        email: 'johndoe@example.com',
+        mobile: '123-456-7890',
+        address: '123 Main Street, City, Country'
+      };
+      updateUserInformation(user);
+    };
+
+    // Function to handle sign-in
+    const handleSignIn = () => {
+      const user = {
+        name: 'John Doe',
+        email: 'johndoe@example.com',
+        mobile: '123-456-7890',
+        address: '123 Main Street, City, Country'
+      };
+      updateUserInformation(user);
+    };
+
+
+      // Function to fetch user information from localStorage
+      const checkuserstatus = () => {
+      const user = JSON.parse(localStorage.getItem('user'));
+      if (user) {
+
+        displayUserInformation(user);
+        showUserAccountInfo(); 
+
+      } else  {
+        showSignInButtons(); // Show the "Sign Up" and "Sign In" buttons
+      }
+    };
+
+
+    // Function to show success message
+    const showSuccessMessage = () => {
+      $('#successMessage').fadeIn().delay(2000).fadeOut();
+    };
+
+    // Event listener for sign-up button
+    $(document).ready(function() {
+      $('#sign-up-button').click(handleSignUp);
+    });
+
+    // Event listener for sign-in button
+    $(document).ready(function() {
+      $('#sign-in-button').click(handleSignIn);
+    });
+
+   
+// Function to display user orders
+const displayUserOrders = (orders) => {
+  const orderList = $('#orderList');
+  orderList.empty(); // Clear previous order list
+
+  if (orders && orders.length > 0) {
+    orders.forEach(order => {
+      order.products.forEach(product => {
+        const orderHTML = `
+          <div class="order">
+            <img src="${product.product.images[0].url}" alt="${product.product.title}">
+            <div class="order-details">
+              <h5>${product.product.title}</h5>
+              <p>Price:${product.product.price} </p>
+              <p>Size:${product.product.size} </p>
+            </div>
+            <div class="order-actions">
+              <a href="return.html"><button>Track Order</button></a>
+              <a href="return.html"><button>Return</button></a>
+            </div>
+          </div>
+        `;
+
+        orderList.append(orderHTML);
+      });
+    });
+  } else {
+    orderList.append(`<p>NO ORDERS</p>`);
+  }
+};
+
+// Function to fetch user orders
+const fetchUserOrders= () => {
+
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+
+  $.ajax({
+    url: 'https://www.immortals.org.in/api/user/get-orders',
+    type: 'GET',
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    success: function(response) {
+      console.log('User Orders:', response);
+      displayUserOrders(response); // Pass the orders to the displayUserOrders function
+    },
+    error: function(error) {
+      console.error('Error fetching user orders:', error.responseText);
+      // Handle error case
+    }
+  });
+};
+
+
+
+
+    // Fetch user orders on page load
+    $(document).ready(function() {
+      fetchUserOrders();
+    });
+
+      // Function to show the "Sign Up" and "Sign In" buttons
+      const showSignInButtons = () => {
+      $('#sign-up-button').show();
+      $('#sign-in-button').show();
+      $('.user-account-page').hide(); // Hide the user account information section
+      $('.your-orders').hide(); // Hide the "Your Orders" section
+      $('#logoutButton').hide(); // Hide the logout button
+    };
+
+       // Function to show the user account information
+       const showUserAccountInfo = () => {
+      $('#sign-up-button').hide();
+      $('#sign-in-button').hide();
+      $('.user-account-page').show(); // Show the user account information section
+      $('.your-orders').show(); // Show the "Your Orders" section
+      $('#logoutButton').show(); // Show the logout button
+    };
+
+
+// Function to save user mobile number
+const saveUserMobile = () => {
+  const newMobile = $('#newMobile').val();
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+
+  $.ajax({
+    url: 'https://www.immortals.org.in/api/user/edit-user',
+    method: 'PUT',
+    headers: {
+      Authorization: `Bearer ${token}`
+    },
+    data: JSON.stringify({
+      mobile: newMobile
+    }),
+    contentType: 'application/json',
+    success: function(response) {
+      console.log('User mobile number updated:', response);
+
+      // Get the current user data from localStorage
+      const user = JSON.parse(localStorage.getItem('user'));
+
+      // Update the user's mobile number in the user object
+      user.mobile = newMobile;
+
+      // Store the updated user data back in localStorage
+      localStorage.setItem('user', JSON.stringify(user));
+
+      // Display the updated user information
+      displayUserInformation(user);
+
+      showSuccessMessage();
+
+      // Hide the "Change Mobile Number" form after successfully updating the mobile number
+      hideChangeMobileForm();
+    },
+    error: function(error) {
+      console.error('Error updating user mobile number:', error.responseText);
+      // Handle error case
+    }
+  });
+};
+
+// Function to show the "Change Mobile Number" form
+const showChangeMobileForm = () => {
+  $('#changeMobileForm').show();
+};
+
+// Function to hide the "Change Mobile Number" form
+const hideChangeMobileForm = () => {
+  $('#changeMobileForm').hide();
+};
+
+// Function to handle the "Change Mobile Number" form submission
+const handleChangeMobileFormSubmit = (event) => {
+  event.preventDefault();
+  saveUserMobile();
+};
+
+// Event listener for "Change Mobile Number" button
+$(document).ready(function() {
+  $('#changeMobileButton').click(showChangeMobileForm);
+});
+
+// Event listener for "Change Mobile Number" form submission
+$(document).ready(function() {
+  $('#changeMobileForm').submit(handleChangeMobileFormSubmit);
+});
+
+
+ // Check if user information is available in localStorage on page load
+    $(document).ready(function () {
+      checkuserstatus();
+    });
+  </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

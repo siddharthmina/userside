@@ -1,0 +1,640 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #f8f8f8;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 20px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  /* Header */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    justify-content: space-between;
+    
+    z-index: 1000;
+    
+  }
+  
+  .container1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo-section img {
+    max-width: 160px;
+    height: auto;
+    margin-left: 10px;
+    width:100%;
+  }
+  
+  .header-icons {
+    display: flex;
+    align-items: center;
+    margin :10px;
+  }
+  
+  .header-icon {
+    margin-left: 10px;
+  }
+  
+  .header-icon img {
+    width: 20px;
+    height: 20px;
+  }
+
+
+  
+
+  /* Styles for the product rating section */
+.ratings {
+  margin-top: 20px;
+}
+
+.ratings h3 {
+  margin-bottom: 10px;
+}
+
+.ratings ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.ratings li {
+  font-size: 20px;
+  color: #595753; /* Golden color for the star */
+  margin-right: 5px;
+}
+.selected {
+  color:#dae0a1
+}
+
+/* Add a gray color for the empty stars */
+.ratings li:not(.star) {
+  color: #ccc;
+}
+#submit-rating {
+  background-color: #007db5;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#submit-rating:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the textarea */
+#rating-comment {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+/* Floating message style */
+#floatingMessage {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 9999;
+  display: none;
+}
+
+#floatingMessage.show {
+  display: block;
+}
+
+
+
+  
+  /* CSS for Select Size Section */
+  .size-section {
+    margin-top: 20px; /* Add some space between the button and the select size section */
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+  
+  }
+  
+  .size-section label {
+    font-weight: bold; /* Make the label text bold */
+    font: 10;
+  }
+  
+  .size-section select {
+    padding: 5px; /* Add padding to the select box */
+    border: 1px solid #ccc; /* Add a border to the select box */
+    border-radius: 5px; /* Rounded corners for the select box */
+    width: 35%; /* Make the select box fill the entire width of its container */
+    margin-top: 5px; /* Add some space between the label and the select box */
+     
+  }
+  
+  /* Style the options within the select box */
+  .size-section select option {
+    padding: 5px;
+  }
+/* CSS for Add to Cart Button */
+.btn-add-to-cart {
+  background-color: #007db5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: background-color 0.3s;
+  font-size: 14px; /* Increase the font size to make it more readable */
+  font-weight: bold; /* Make the text bold */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for a 3D effect */
+}
+
+.btn-add-to-cart:hover {
+  background-color: #157c93;
+}
+
+/* Add hover and active effects for a more interactive experience */
+.btn-add-to-cart:hover,
+.btn-add-to-cart:active {
+  transform: translateY(-2px); /* Move the button up slightly on hover/active */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increase the box shadow on hover/active */
+}
+
+/* Center the button horizontally and add some margin at the top */
+.buttonss {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+
+  /* CSS for Product Container */
+.product-container {
+  /* Create a flexbox layout */
+  display: flex;
+  margin: auto;
+  position: relative; 
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the left */
+  margin-top:10px;
+}
+
+.product-details-container {
+  /* Create a flexbox layout */
+  display: flex;
+  margin: auto;
+  flex-direction: column; /* Change to a column layout to stack the elements */
+  align-items: flex-start; /* Align items to the left */
+}
+/* CSS for Product Container */
+
+  /* Product Details */
+  .product-container {
+    background-color: #fff;
+    
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-title {
+    margin-bottom: 20px;
+  }
+  
+  .product-details-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  
+  .product-images {
+    flex: 1;
+    max-width: 500px;
+    margin: 10px;
+    text-align: center;
+    
+  }
+  .product-images-section {
+  display: flex;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+}
+
+.product-images-container {
+  flex: 0 0 auto;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.product-images-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+  
+  .product-images img {
+    
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-info {
+    flex: 1;
+    max-width: 400px;
+    margin: 0px;
+  }
+
+  
+  .product-info p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .product-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  .product-info .price {
+    font-size: 17px;
+    font-weight: bold;
+    color: #262826;
+  }
+  .product-info .price .discountprice {font-size:18px;
+  font-weight: lighter;
+  text-decoration: line-through; }
+ 
+  .product-info .price .offer {font-size:18px;
+    font-weight: lighter;
+    color: rgb(238, 68, 68); }
+  
+  .product-info .color {
+    font-size: 16px;
+    color: #555;
+  }
+  
+
+  /* Buying Options Section */
+  .buying-options {
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 20px;
+    padding: 40px 0;
+    text-align: center;
+    width:auto;
+  }
+  
+  
+  .buying-options h2 {
+    margin-bottom: 30px;
+  }
+  
+  .buying-options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+ 
+  
+  .buying-option img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .buying-option h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .buying-option p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Bottom Section */
+  .bottom-section {
+    background-color: #ffffff;
+    padding: 30px 0;
+    width:100%;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .section-column {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
+  
+  .section-column h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .help-links,
+  .account-links,
+  .pages-links {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .help-links a,
+  .account-links a,
+  .pages-links a {
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .help-links a:hover,
+  .account-links a:hover,
+  .pages-links a:hover {
+    color: #888;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 0px;
+    width:100%;
+  }
+  
+  footer p {
+    font-size: 14px;
+  }
+  
+  @media (max-width: 768px) {
+    .product-details-row {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .product-images {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+    .buying-options-grid {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 10px;
+    }
+  
+    .section-column {
+      flex-basis: 100%;
+    }
+  
+  #floatingMessage {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 10px;
+    background-color: #363333;
+    border: 1px solid #373535;
+    border-radius: 4px;
+    box-shadow: 0px 2px 10px rgba(150, 147, 147, 0.1);
+    text-align: center;
+    color: #ffffff;
+    font-size: small;
+  }
+  
+  #floatingMessage.show {
+    display: block;
+  }
+
+    .section-column {
+      flex-basis: 100%;
+    }
+    .ratinginfo{
+      width: 330px;
+    }
+  }
+  
+  /* Styling for the ratings section */
+.ratinginfo {
+ 
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+}
+
+.ratinginfo h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.ratinginfo ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ratinginfo li {
+  font-size: 12px;
+  color: #878786;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.ratinginfo p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.ratinginfo span {
+  display: block;
+  font-size: 1rem;
+  color: #777;
+}
+
+.ratinginfo p:first-child {
+  margin-top: 10px;
+}
+.loader-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.product-gallery {
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+#product-image {
+  max-width: 100%;
+  display: block;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+}
+
+
+
+.image-scroll-container {
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.image-scroll-container img {
+    margin-right: 8px;
+    max-width: 90%;
+    height: auto;
+}
+
+
+.size-button, .color-button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  transition: all 0.3s ease; /* Transition effect for smooth changes */
+  position: relative; /* Required for 3D effect */
+  text-transform: uppercase;
+  
+}
+
+.size-button:hover,
+.color-button:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.size-button.selected,
+.color-button.selected {
+  background-color: #6c7075;
+  color: #ffffff;
+  transform: translateY(-2px); /* Slight lift when selected */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow when selected */
+}
+
+
+/* 3D effect on click */
+.size-button:active,
+.color-button:active {
+  transform: translateY(2px); /* Pressed down effect */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Reduced shadow when clicked */
+}
+
+
+.custom-close {
+  font-size: 1.5rem; /* Increase the font size */
+  line-height: 1;    /* Adjust line-height */
+  color: #000;       /* Set color to black */
+  opacity: 0.5;      /* Set transparency */
+  text-shadow: none; /* Remove text shadow */
+  background-color: transparent; /* Set background to transparent */
+  border: none; /* Remove border */
+}
+
+.custom-close:hover {
+  opacity: 1; /* Increase opacity on hover */
+}
+
+.custom-x {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.custom-close:hover .custom-x {
+  color: #007db5;
+}
+
+#signInButton:hover {
+  background-color: #cccfcf;
+}
+
+#continueAsGuestButton:hover {
+  background-color: #006a95;
+}

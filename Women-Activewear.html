@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27GHWZBHXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27GHWZBHXT');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="functions/category.css">
+  <!-- Define the schema.org markup for the website -->
+  <meta name="description" content="Immortals Lifestyle - Your destination for premium Lifestyle wear">
+  <meta name="keywords" content="Immortals Lifestyle,Immortals, Athleisure, Plain tshirts, Printed tshirts, Sweatshirts, ActiveWear, Regular-Fit, Shorts,gym tshirt , gym sando , sports tshirt , sports sando ,yoga tshirt ">
+  <meta name="author" content="Immortals Lifestyle">
+  <meta name="description" content="Shop Tops for Women online in India from Immortals Lifestyle.. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="keywords" content>  
+  <meta property="og:site_name" content="Immortals Lifestyle"> 
+  <meta property="og:title" content="Immortals Lifestyle">
+  <meta property="og:description" content="Shop Tops for Women online in India from Immortals Lifestyle. Choose from the trendy collection of Stylish Tops for Girls and avail good discounts. Free Shipping">
+  <meta property="og:image" content="image/logo.jpeg">
+  <meta property="og:url" content="https://www.immortals.org.in">
+ 
+  <meta itemprop="name" content="Immortals Lifestyle">
+  <meta itemprop="description" content="Welcome to Immortals Athleisure, a digital clothing store for all your athleisure needs.">
+  <meta itemprop="image" content="https://www.immortals.org.in/image/logo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>Immortals Lifestyle - Women's ActiveWear</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemPage",
+      "name": "Immortals Lifestyle Women's Activewear",
+      "description": "Explore our collection of women's activewear, designed for performance, comfort, and style. Perfect for workouts, running, and yoga.",
+      "image": "https://example.com/image/women_activewear.jpeg",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://www.immortals.org.in",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://www.immortals.org.in/women-activewear",
+              "name": "Women's Activewear"
+            }
+          }
+        ]
+      }
+    }
+    </script>
+    
+  </head>
+  <body>
+    <div class="container d-flex align-items-center">
+    
+      <header class="w-100">
+        
+        <div class="row justify-content-between align-items-center">
+           <!-- Header Icon left -->
+           <div class="col-auto"> 
+            <div class="header-icons d-flex">
+              <div class="header-icon">
+                <a href="functions/useraccount.html"><img src="image/account.png" alt="My Account"></a>
+              </div>
+            </div>
+          </div>
+  
+        
+          <!-- Logo Section -->
+          
+          <div class="col d-flex align-items-center justify-content-center"> <!-- Added d-flex and justify-content-center classes here -->
+            <a href="index.html"><img src="image/logo.jpeg" alt="" class="img-fluid" style="max-width: 150px; max-height: 150px;"></a>
+          </div>
+          
+        
+          <!--Header Icon right-->
+          <div class="col-auto">
+            <div class="header-icons d-flex"> <!-- Added d-flex class here -->
+              <div class="header-icon">
+                <a href="functions/cart.html"><img src="image/cart.png" alt="Cart"></a>
+              </div>
+              </div>           
+            </div>
+          </div> 
+        
+      </header>
+    </div>
+
+
+<!--Hero-->
+<section class="hero hero-background">
+  <div id="particles-js" class="particles"></div>
+  <div class="container">
+      <div class="yo">
+          <div class="hero-content">
+              <!-- Buttons for SHOP WOMEN and SHOP MEN -->
+              <!-- <div class="d-lg-flex flex-column flex-lg-row">
+                  <button class="btn btn-women" onclick="openAthleisurePage()">athleisure</button>
+                  <button class="btn btn-men" onclick="scrollToSection('lifestyle')">lifestyle</button>
+              </div> -->
+              <h1 class="hero-title" style="white-space: pre-line;">
+                Because Your Mirror Muscles Deserve the Best!
+
+
+
+
+                 
+              </h1>
+          </div>
+      </div>
+  </div>
+</section>
+ 
+ 
+
+  <!-- Male Section -->
+  <section class="products-section" itemscope itemtype="http://schema.org/Product">
+    <div class="container">
+    <h2>ACTIVE-WEAR</h2>
+    <div class="product-class" id="activewear-product-grid">
+        <!-- Products will be dynamically added here -->
+    </div>
+    </div>
+</section>
+
+  <div id="floatingMessage"></div>
+  
+<!-- User Information -->
+<!-- <div id="user-info"></div> -->
+
+<!-- Login Message -->
+<!-- <p id="login-message"></p> -->
+
+
+  <!-- Buying Options Section -->
+  <section class="buying-options" itemscope itemtype="http://schema.org/ItemList">
+    <div class="container">
+      <h2>Easy Shopping Experience</h2>
+      <div class="buying-options-grid">
+        <div class="buying-option" itemscope itemtype="http://schema.org/Offer">
+          <img src="image/shipping.png" alt="Shipping Icon">
+          <h3>Fast Shipping</h3>
+          <p>Get your order delivered quickly.</p>
+        </div>
+        <div class="buying-option" >
+          <img src="image/customer.png" alt="cutomer service">
+
+          <h3>Customer Service</h3>
+          <p>For Your convenience We are Available Over
+             WhatsApp: +91 8239015264
+          </p>
+        </div>
+        <div class="buying-option">
+          <img src="image/secure.png" alt="Payment Icon">
+          <h3>Secure Payments</h3>
+          <p>Your payment information is safe with us.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Help, My Account, and Pages Section -->
+<section class="bottom-section" itemscope itemtype="http://schema.org/WPFooter">
+    <div class="container">
+      <div class="rows">
+        <div class="section-column" itemscope itemtype="http://schema.org/WebPageElement">
+          
+          <h2>Help</h2>
+          
+          <div class="help-links">
+            <!-- <a href="FAQ.html">FAQ</a>
+            
+            <a href="size.html">Size Guide</a>
+            <a href="contact.html">Contact Us On</a>
+            <a href="#">careimmortals@gmail.com </a> -->
+            <p>WhatsApp Us: +91 8239015264</p>
+            <p>Email Us : careimmortals@gmail.com</p>
+          </div>
+        </div>
+        <div class="section-column">
+          <h2>My Account</h2>
+          <div class="account-links">
+            <a href="functions/signin.html">Login</a>
+            <a href="functions/createaccount.html">Signup</a>
+            <a href="functions/useraccount.html">Order History</a>
+            <!-- <a href="#">Wishlist</a> -->
+          </div>
+        </div>
+        <div class="section-column">
+          <h2>Pages</h2>
+          <div class="pages-links">
+            <a href="functions/termsofservice.html">Terms of Service</a>
+            <a href="functions/privacypolicy.html">Privacy Policy</a>
+            <a href="functions/return.html">Return Policy</a>
+            <!-- <a href="#">Sitemap</a> -->
+          </div>
+        </div>
+        <div class="section-column">
+          <h2>Follow Us</h2>
+          <div class="social-links">
+            <a href="https://www.instagram.com/immortals_athleisure/"><img src="image/instagram.png" alt="Instagram"></a>
+            <a href="#"><img src="image/twitter.png" alt="Twitter"></a>
+            <a href="https://www.facebook.com/profile.php?id=100094772927946"><img src="image/facebook.png" alt="Facebook"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div id="loadingState" class="loader-container">
+    <div class="loader"></div>
+  </div>
+  <!-- Footer -->
+  <footer itemscope itemtype="http://schema.org/WPFooter">
+   
+    <div class="container">
+      <p>&copy; 2023 Digital Clothing Store. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+
+
+// Function to show the loader
+function showLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'block';
+}
+
+// Function to hide the loader
+function hideLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'none';
+}
+
+// Use the functions before and after your async operations:
+async function someAsyncFunction() {
+    showLoader();
+    
+    // Your async operations, like API calls, etc.
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // For demonstration: simulating a delay.
+
+    hideLoader();
+}
+
+// For demonstration purposes:
+document.addEventListener('DOMContentLoaded', () => {
+    someAsyncFunction();
+});
+
+       async function fetchCategories() {
+      try {
+        const response = await axios.get('https://www.immortals.org.in/api/category');
+        const categories = response.data;
+
+        const categoryGrid = document.getElementById('category-grid');
+
+        categories.forEach((category) => {
+          const categoryCard = document.createElement('div');
+          categoryCard.classList.add('category-card');
+
+          const categoryTitle = document.createElement('h3');
+          categoryTitle.textContent = category.title;
+          categoryCard.appendChild(categoryTitle);
+
+          // Add an event listener to handle category click
+          categoryCard.addEventListener('click', () => {
+            handleCategoryClick(category._id);
+          });
+
+          categoryGrid.appendChild(categoryCard);
+        });
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    function handleCategoryClick(categoryId) {
+      // You can perform additional actions when a category is clicked,
+      // for example, fetching products related to the clicked category.
+      console.log('Category clicked:', categoryId);
+      // Implement your logic here to fetch and display products based on the category ID.
+      // For example, you can call a function like fetchProductsByCategory(categoryId).
+    }
+
+    // Fetch categories on page load
+    window.addEventListener('DOMContentLoaded', fetchCategories);
+    //add to cart functionality
+  async function addToCart(productId) {
+  try {
+    const count = 1; // Set count to 1
+    const token = JSON.parse(localStorage.getItem('user'))?.token;
+
+    if (!token) {
+        // User is not logged in, redirect to user account page
+        window.location.href = 'functions/useraccount.html';
+        return;
+      }
+
+    const response = await axios.post(
+      'https://www.immortals.org.in/api/user/cart',
+      {
+        cart: [{ _id: productId, count, color: '' }] // Set color to an empty string
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      }
+    );
+    const newCart = response.data;
+    console.log('Added to cart:', newCart);
+    displayFloatingMessage('Added to Cart');
+    updateCartCount(newCart.products.length);
+    
+
+// Redirect to cart window after 1.5 seconds
+setTimeout(() => {
+  window.location.href = 'functions/cart.html';
+}, 1500);
+  } catch (error) {
+    console.error(error);
+  }
+}
+    // Function to display a floating message
+    const displayFloatingMessage = (message) => {
+      const floatingMessage = $('#floatingMessage');
+      floatingMessage.text(message);
+      floatingMessage.addClass('show');
+
+      setTimeout(() => {
+        floatingMessage.removeClass('show');
+      }, 1000); // Set the timeout to hide the message after 3 seconds
+    };
+
+    async function fetchProducts() {
+  try {
+    const response = await axios.get('https://www.immortals.org.in/api/product');
+    const products = response.data;
+    const masthleisureProductGrid = document.getElementById('mathleisure-product-grid');
+    const activewearProductGrid = document.getElementById('activewear-product-grid');
+    const wasthleisureProductGrid = document.getElementById('wathleisure-product-grid');
+    const wlifestyleProductGrid = document.getElementById('wlifestyle-product-grid');
+    const unisexProductGrid = document.getElementById('unisex-product-grid'); 
+
+    products.forEach(product => {
+      const productCard = document.createElement('div');
+      productCard.classList.add('product-card');
+      
+
+      const productImage = document.createElement('img');
+      productImage.src = product.images[0].url;
+      productImage.alt = product.title;
+      productImage.addEventListener('click', () => {
+        viewProductDetails(product);
+      });
+      productCard.appendChild(productImage);
+
+      const productDetails = document.createElement('div');
+      productDetails.classList.add('product-details');
+
+      const productTitle = document.createElement('h3');
+      productTitle.textContent = product.title;
+      productTitle.addEventListener('click', () => {
+        viewProductDetails(product);
+      });
+      productDetails.appendChild(productTitle);
+
+       // Create a container to hold the price elements
+       const priceContainer = document.createElement('div');
+    priceContainer.classList.add('price-container');
+
+      const productPrice = document.createElement('h19');
+      productPrice.textContent = `Rs: ${product.price}`;
+      priceContainer.appendChild(productPrice);
+
+      const productdiscountPrice = document.createElement('h20');
+      productdiscountPrice.textContent = `${product.discountprice}`;
+      priceContainer.appendChild(productdiscountPrice);
+      
+      const productPercentage = document.createElement('p');
+      productPercentage.textContent = `save ${product.percentage}%`;
+      priceContainer.appendChild(productPercentage);
+ // Create a div to hold the product size dropdown
+ const productSizeDiv = document.createElement('div');
+      productSizeDiv.classList.add('product-size');
+
+      // Create the label for the dropdown
+      const sizeLabel = document.createElement('label');
+      sizeLabel.textContent = 'Size: ';
+      productSizeDiv.appendChild(sizeLabel);
+
+      // Create the select element for the dropdown
+      const sizeSelect = document.createElement('select');
+      sizeSelect.name = 'size';
+      sizeSelect.id = `size-${product._id}`;
+
+      // Fetch available sizes from the product object (product.size)
+      // and populate the dropdown
+      product.size.forEach((size) => {
+        const option = document.createElement('option');
+        option.value = size;
+        option.textContent = size;
+        sizeSelect.appendChild(option);
+      });
+
+      productSizeDiv.appendChild(sizeSelect);
+      productDetails.appendChild(productSizeDiv);
+      // Add the price container to the product details
+        productDetails.appendChild(priceContainer);
+      const addToCartButton = document.createElement('button');
+      addToCartButton.textContent = 'Add to Cart';
+      addToCartButton.addEventListener('click', () => {
+        addToCart(product._id);
+      });
+      productDetails.appendChild(addToCartButton);
+
+      productCard.appendChild(productDetails);
+
+      if (product.category.toLowerCase() === 'wactivewear') {
+        activewearProductGrid.appendChild(productCard);
+
+      } 
+    });
+  } catch (error) {
+    console.error(error);
+  }
+}
+  window.addEventListener('DOMContentLoaded', fetchProducts);
+  function viewProductDetails(product) {
+  // Save the product details to localStorage
+  localStorage.setItem('selectedProduct', JSON.stringify(product));
+  // Navigate to the "contact.html" page
+  window.location.href = 'functions/product.html';
+}
+   // Function to check if the user is logged in
+   function isLoggedIn() {
+      const user = JSON.parse(localStorage.getItem('user')); // Retrieve user details from local storage      
+      // Check if user exists and has required properties
+      if (user && user._id && user.name && user.email && user.token) {
+        return true;
+      }
+      return false;
+    }
+    // // Function to display user information
+    function displayUserInfo() {
+      const user = JSON.parse(localStorage.getItem('user')); // Retrieve user details from local storage
+      if (isLoggedIn()) {
+        const userInfo = document.getElementById('user-info');
+
+        // Display user information
+        userInfo.innerHTML = `
+          <p>Name: ${user.name}</p>
+        `;
+        loginMessage.textContent = 'logged in' ;
+      } else {
+        const loginMessage = document.getElementById('login-message');
+
+        // Display login message
+        loginMessage.textContent = 'Please login ';
+      }
+    }    
+    // Fetch user information on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      displayUserInfo();
+    });
+       // Check if user is logged in and display appropriate information
+       function checkAuthentication() {
+      const refreshToken = localStorage.getItem('refreshToken');
+      const refreshTokenElement = document.getElementById('refreshToken');
+
+      if (refreshToken) {
+        refreshTokenElement.textContent = refreshToken;
+        // Additional actions for a logged-in user
+      } else {
+        refreshTokenElement.textContent = 'No refresh token found.';
+        // Actions for a non-logged-in user
+    }
+  }
+
+  // Call checkAuthentication function on page load
+  window.addEventListener('DOMContentLoaded', checkAuthentication);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

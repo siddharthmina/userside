@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27GHWZBHXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27GHWZBHXT');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Immortals Lifestyle - Your destination for premium Lifestyle wear">
+  <meta name="keywords" content="Immortals Lifestyle,Immortals, Athleisure, Plain tshirts, Printed tshirts, Sweatshirts, ActiveWear, Regular-Fit, Shorts,gym tshirt , gym sando , sports tshirt , sports sando ,yoga tshirt ">
+  <meta name="author" content="Immortals Lifestyle">
+  <meta name="description" content="Shop Tops for Women online in India from Immortals Lifestyle.. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <!-- Open Graph Meta Tags for social media sharing -->
+  <meta property="keywords" content>  
+  <meta property="og:site_name" content="Immortals Lifestyle"> 
+  <meta property="og:title" content="Immortals Lifestyle">
+  <meta property="og:description" content="Slay the Day the Immortals Way! Explore our premium clothing designs.Online Shopping Site for Men & Women. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+  <meta property="og:image" content="image/logo.jpeg">
+  <meta property="og:url" content="https://www.immortals.org.in/cart.html">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="functions/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="cart.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Immortals Lifestyle - Cart</title>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Immortals Lifestyle Cart",
+      "description": "View your selected products, proceed to checkout, or empty the cart on Immortals Lifestyle.",
+      "url": "https://www.immortals.org.in/cart",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@id": "https://www.immortals.org.in",
+              "name": "Home"
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@id": "https://www.immortals.org.in/cart",
+              "name": "Cart"
+            }
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "CheckoutAction",
+        "target": "https://www.immortals.org.in/checkout",
+        "description": "Proceed to checkout to finalize your purchase."
+      }
+    }
+    </script>
+    
+</head>
+<body>
+  <div class="container d-flex align-items-center">
+    <header class="w-100">
+      <div class="row justify-content-between align-items-center">      
+        <!-- Logo Section -->
+        
+        <div class="col d-flex align-items-center justify-content-center"> <!-- Added d-flex and justify-content-center classes here -->
+          <a href="../index.html"><img src="image/logo.jpeg" alt="" class="img-fluid" style="max-width: 150px; max-height: 150px;"></a>
+        </div>
+        </div> 
+    </header>
+  </div>
+  <div class="step-container">
+    <div class="step-icon completed-step">
+        <i class="fas fa-shopping-cart"></i> <!-- Cart Icon -->
+    </div>
+    <div class="step-line"></div>
+    <div class="step-icon">
+        <i class="fas fa-map-marker-alt"></i> <!-- Address Icon -->
+    </div>
+    <div class="step-line"></div>
+    <div class="step-icon">
+        <i class="fas fa-credit-card"></i> <!-- Payment Icon -->
+    </div>
+    <div class="step-line"></div>
+    <div class="step-icon">
+        <i class="fas fa-check"></i> <!-- Completion Icon -->
+    </div>
+</div>
+<div id="loadingState" class="loader-container">
+  <div class="loader"></div>
+</div>
+  <section class="cart-section">
+    <div class="container">
+      <h3></h3>
+      <div class="cart-items" id="cart-items">
+        <!-- Cart items will be dynamically added here -->
+      </div>
+      <div class="cart-total" id="cart-total">        
+        <h5> <span id="cart-total-amount"></span></h5>
+      </div>
+      
+      <button class="btn w-100 btn-primary rounded-pill px-4" id="empty-cart-button"><i class="fas fa-shopping-bag">  </i>    Empty Bag</button>
+      <button class="btn-primary rounded-pill px-4" id="checkout-button" style="width: 100%;">Proceed To Checkout</button>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Digital Clothing Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script>
+
+
+// Function to show the loader
+function showLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'block';
+}
+
+// Function to hide the loader
+function hideLoader() {
+    const loader = document.getElementById('loadingState');
+    loader.style.display = 'none';
+}
+
+// Use the functions before and after your async operations:
+async function someAsyncFunction() {
+    showLoader();
+    
+    // Your async operations, like API calls, etc.
+    await new Promise((resolve) => setTimeout(resolve, 1000)); // For demonstration: simulating a delay.
+
+    hideLoader();
+}
+
+// For demonstration purposes:
+document.addEventListener('DOMContentLoaded', () => {
+    someAsyncFunction();
+});
+
+// Event listener for checkout button
+const checkoutButton = document.getElementById('checkout-button');
+checkoutButton.addEventListener('click', () => {
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+  if (token) {
+    window.location.href = 'address.html'; // Redirect to the order page for logged-in users
+  } else if(!token || token === 'undefined'){
+    window.location.href = 'createaccount.html'; // Redirect to the user account page for non-logged-in users
+  }
+});
+
+// Function to fetch product size
+async function fetchProductSize(productId) {
+  try {
+    const response = await axios.get(`https://www.immortals.org.in/api/product/${productId}`);
+    const product = response.data;
+    return product.size;
+  } catch (error) {
+    console.error(error);
+    return 'Unknown Size'; // Return a default size if fetching fails
+  }
+}
+
+
+
+// Fetch cart items for logged-in users from the server
+async function fetchCartItemsFromServer() {
+  try {
+    const token = JSON.parse(localStorage.getItem('user'))?.token;
+    
+      const response = await axios.get('https://www.immortals.org.in/api/user/cart', {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      const cartItems = response.data.products;
+      console.log('Cart items from server:', cartItems);
+      const cartItemsContainer = document.getElementById('cart-items');
+      cartItemsContainer.innerHTML = ''; // Clear the container
+
+      cartItems.forEach((item) => {
+        const cartItem = document.createElement('div');
+        cartItem.classList.add('cart-item');
+
+        const productImage = document.createElement('img');
+        productImage.src = item.product.images[0].url;
+        productImage.alt = item.product.title;
+        cartItem.appendChild(productImage);
+
+        const productDetails = document.createElement('div');
+        productDetails.classList.add('product-details');
+
+        const productTitle = document.createElement('h3');
+        productTitle.textContent = item.product.title;
+        productDetails.appendChild(productTitle);
+
+        const productPrice = document.createElement('p');
+        productPrice.textContent = `Price: ${item.product.price}`;
+        productDetails.appendChild(productPrice);
+
+        const productSize = document.createElement('p');
+        productSize.textContent = `Size: ${item.size}`;
+        productDetails.appendChild(productSize);
+
+        const productColor = document.createElement('p');
+        productColor.textContent = `Color: ${item.color}`;
+        productDetails.appendChild(productColor);
+
+        const productQuantity = document.createElement('p');
+        productQuantity.textContent = `Quantity: ${item.count}`;
+        productDetails.appendChild(productQuantity);
+
+        cartItem.appendChild(productDetails);
+        cartItemsContainer.appendChild(cartItem);
+      });
+
+      calculateCartTotal(cartItems); // Calculate and display the cart total
+   
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+// Call the appropriate function to fetch cart items based on the user's login status
+window.addEventListener('DOMContentLoaded', fetchCartItemsFromServer);
+
+
+
+ // Event listener for empty cart button
+const emptyCartButton = document.getElementById('empty-cart-button');
+emptyCartButton.addEventListener('click', () => {
+  const token = JSON.parse(localStorage.getItem('user'))?.token;
+  const userId = JSON.parse(localStorage.getItem('user'))?._id;
+  emptyCart(token, userId);
+});
+
+// Empty the cart
+async function emptyCart(token, userId) {
+  try {
+    
+      // User is logged in, empty the cart using the token
+      const response = await axios.delete(`https://www.immortals.org.in/api/user/empty-cart`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+
+      console.log('Cart emptied:', response.data);
+      reloadPage(); // Reload the page
+       // Fetch and display updated cart items
+ 
+  } catch (error) {
+    console.error(error);
+  }
+}
+// Function to reload the page
+function reloadPage() {
+  window.location.reload();
+}
+
+
+    
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

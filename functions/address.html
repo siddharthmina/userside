@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-27GHWZBHXT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-27GHWZBHXT');
+</script>
+<!--meta tags here-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Immortals Lifestyle - Your destination for premium Lifestyle wear">
+        <meta name="keywords" content="Immortals Lifestyle,Immortals, Athleisure, Plain tshirts, Printed tshirts, Sweatshirts, ActiveWear, Regular-Fit, Shorts,gym tshirt , gym sando , sports tshirt , sports sando ,yoga tshirt ">
+        <meta name="author" content="Immortals Lifestyle">
+        <meta name="description" content="Shop Tops for Women online in India from Immortals Lifestyle.. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+        <!-- Open Graph Meta Tags for social media sharing -->
+        <meta property="keywords" content>  
+        <meta property="og:site_name" content="Immortals Lifestyle"> 
+        <meta property="og:title" content="Immortals Lifestyle">
+        <meta property="og:description" content="Slay the Day the Immortals Way! Explore our premium clothing designs.Online Shopping Site for Men & Women. Choose from the best in Men Clothing and Women Fashion Wear. Trendiest designs and styles available at immortals.org.in . Select from a diverse range of clothes online. Shop from the best online shopping site for clothes. Free Shipping Over 699, Easy Returns, COD Available!">
+        <meta property="og:image" content="image/logo.jpeg">
+        <meta property="og:url" content="https://www.immortals.org.in/address.html">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+        <link rel="shortcut icon" href="favicon.ico">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="msapplication-config" content="functions/browserconfig.xml">
+        <meta name="theme-color" content="#ffffff">
+        <title>Immortals Lifestyle - Address-Input</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+        <!-- Link Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <!-- Link Bulma CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+        <!-- Link Your Website's CSS -->
+        <link rel="stylesheet" href="address.css">
+        <script type="application/ld+json">
+          {
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Manage Address",
+            "description": "Manage your shipping and billing addresses.",
+            "url": "https://www.immortals.org.in/address"
+          }
+          </script>
+          
+      </head>
+<body>
+  <header class="heasers">
+    <div class="container">
+        <div class="d-flex justify-content-center logo-section">
+            <a href="../index.html">
+                <img src="image/logo.jpeg" alt="" class="img-fluid" style="max-width: 200px;">
+            </a>
+        </div>          
+    </div>
+</header>
+
+<div class="container mt-4 mb-4">
+  <div class="row justify-content-center">
+      <div class="col text-center step-container">
+          <div class="step-icon completed-step"><i class="fas fa-shopping-cart"></i></div> <!-- Cart Step -->
+          <div class="step-line completed-line"></div>
+          <div class="step-icon active-step"><i class="fas fa-map-marker-alt"></i></div> <!-- Address Step -->
+          <div class="step-line"></div>
+          <div class="step-icon"><i class="fas fa-credit-card"></i></div> <!-- Payment Step -->
+          <div class="step-line"></div>
+          <div class="step-icon"><i class="fas fa-check-circle"></i></div> <!-- Confirmation Step -->
+      </div>
+  </div>
+</div>
+
+<div id="loadingState" class="loader-container">
+  <div class="loader"></div>
+</div>
+    
+   <!-- Main Content Section -->
+   <section class="section">
+    <div class="container">
+      <h1 class="title has-text-centered"></h1>
+      <div class="columns is-centered">
+        <div class="column is-half">
+     <!-- Address Form -->
+<form id="addressForm">
+    <div class="field">
+      <label class="label">Name</label>
+      <div class="control">
+        <input class="input" type="text" id="name" name="name" placeholder="Enter your Name" required>
+      </div>
+    </div>
+  
+    <div class="field">
+      <label class="label">Phone </label>
+      <div class="control">
+        <input class="input" type="text" id="mobile" name="mobile" placeholder="Enter your phone no." required>
+      </div>
+    </div>
+  
+    <div class="field">
+      <label class="label">Pincode</label>
+      <div class="control">
+        <input class="input" type="text" id="pincode" name="pincode" placeholder="Enter your Pincode" required>
+      </div>
+    </div>
+  
+    <div class="field">
+      <label class="label">Address</label>
+      <div class="control">
+        <input class="input" type="text" id="useraddress" name="useraddress" placeholder="Enter your Address" required>
+      </div>
+    </div>
+  
+    <div class="field">
+      <label class="label">City</label>
+      <div class="control">
+        <input class="input" type="text" id="city" name="city" placeholder="Enter your City name" required>
+      </div>
+    </div>
+  
+    <div class="field">
+      <label class="label">State</label>
+      <div class="control">
+        <input class="input" type="text" id="state" name="state" placeholder="Enter your state" required>
+      </div>
+    </div>
+
+            <div class="field">
+              <div class="control">
+                <button class="btn btn-primary rounded-pill 4x w-100" style="background-color:#007db5 ; padding: 10px; padding-left: 20px; padding-right:20px;" type="submit">Process to checkout</button>
+
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Link Bootstrap and Bulma JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Function to show the loader
+    function showLoader() {
+      const loader = document.getElementById('loadingState');
+      loader.style.display = 'block';
+    }
+  
+    // Function to hide the loader
+    function hideLoader() {
+      const loader = document.getElementById('loadingState');
+      loader.style.display = 'none';
+    }
+  
+    // Event listener for the address form submission
+    document.getElementById('addressForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+  
+      const name = document.getElementById('name').value;
+      const mobile = document.getElementById('mobile').value;
+      const pincode = document.getElementById('pincode').value;
+      const useraddress = document.getElementById('useraddress').value;
+      const city = document.getElementById('city').value;
+      const state = document.getElementById('state').value;
+  
+      const addressData = {
+        address: [{
+          name,
+          mobile,
+          pincode,
+          useraddress,
+          city,
+          state
+        }]
+      };
+  
+      // Save the address to localStorage
+      localStorage.setItem('address', JSON.stringify(addressData));
+  
+      const token = JSON.parse(localStorage.getItem('user'))?.token;
+  
+      try {
+        showLoader(); // Show the loader while processing
+  
+        const response = await fetch('http://localhost:5008/api/user/cart/address', {
+          method: 'PUT',
+          headers: {
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${token}` // Include the bearer token in the header
+          },
+          body: JSON.stringify(addressData)
+        });
+  
+        hideLoader(); // Hide the loader after processing
+  
+        if (response.ok) {
+          // Redirect to the order page or handle success as needed
+          window.location.href = 'orderpage.html';
+        } else {
+          alert('Failed to save address. Please try again later.');
+        }
+      } catch (error) {
+        console.error('Error saving address:', error);
+        hideLoader(); // Hide the loader if an error occurs
+        alert('An error occurred while saving address. Please try again later.');
+      }
+    });
+  </script>
+  
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
